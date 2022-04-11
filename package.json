@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "@typeform/embed-react": "^1.14.0",
     "daisyui": "^2.13.6",
     "next": "12.1.4",
     "react": "18.0.0",
