@@ -7,7 +7,9 @@ module.exports = {
     extend: {},
   },
   // Adding DaisyUI Plugin
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+  ],
   // Adding Custom DaisyUI Configurations
   daisyui: {
     styled: true,
