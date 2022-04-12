@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 import ConsultButton from "./ConsultButton";
@@ -7,7 +8,7 @@ import  { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const NavBar = () => {
   return (
-    <Disclosure as="nav" className="bg-primary">
+    <Disclosure as="nav" className="w-full bg-primary fixed top-0 z-40">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,16 +27,17 @@ const NavBar = () => {
                 </div>
                 {/* Logo - First: Show when mobile. Second: Show when full-screen. */}
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
-                  />
-                  <img
+                  <div className="block lg:hidden mt-1">
+                    <Image src="/logos/vss_logo.png" width="40" height="55" layout="intrinsic" alt="Vicious Streak Salon"/>
+                  </div>
+                  <div className="hidden lg:block mt-1">
+                    <Image src="/logos/vss_logo.png" width="50" height="60" layout="intrinsic" alt="Vicious Streak Salon"/>
+                  </div>
+                  {/* <img
                     className="hidden lg:block h-8 w-auto"
                     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                     alt="Workflow"
-                  />
+                  /> */}
                 </div>
                 {/* NavBar Links */}
                 <div className="hidden md:ml-6 md:flex md:space-x-2">
@@ -50,6 +52,12 @@ const NavBar = () => {
                     className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
                     Services
+                  </a>
+                  <a
+                    href="#testimonials"
+                    className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                  >
+                    Testimonials
                   </a>
                   <a
                     href="#find-us"
@@ -85,6 +93,13 @@ const NavBar = () => {
                 className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
                 Services
+              </Disclosure.Button>
+              <Disclosure.Button
+                as="a"
+                href="#testimonials"
+                className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
+              >
+                Testimonials
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"

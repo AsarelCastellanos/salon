@@ -2,7 +2,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <section className="bg-primary body-font">
+    <section id="service" className="bg-primary body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-white">

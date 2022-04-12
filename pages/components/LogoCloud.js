@@ -11,36 +11,36 @@ const LogoCloud = () => {
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <img
               className="h-12"
-              src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-              alt="Tuple"
+              src="/logos/pulpRiot.png"
+              alt="Pulp Riot"
             />
           </div>
 
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <img
               className="h-12"
-              src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-              alt="Mirage"
+              src="/logos/olaplex.png"
+              alt="Olaplex"
             />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
             <img
               className="h-12"
-              src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-              alt="StaticKit"
+              src="/logos/pravana.png"
+              alt="Pravana"
             />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
             <img
               className="h-12"
-              src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-              alt="Transistor"
+              src="/logos/redken.png"
+              alt="Redken"
             />
           </div>
           <div className="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
             <img
               className="h-12"
-              src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
+              src="/logos/k18.svg"
               alt="Workcation"
             />
           </div>

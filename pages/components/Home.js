@@ -4,7 +4,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-gray-50">
+    <section id="home" className="bg-gray-50">
       <div className="relative overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
           <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
@@ -14,9 +14,10 @@ const Home = () => {
                 <span className="block text-primary">by Vidalia Arellano</span>
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
+                I&apos;m a hair vivids specialist and a hair extension
+                specialist located in Santa Ana, California. Certified with
+                Bellami Hair. I specialize in sew-in extensions, beaded wefts,
+                tape in extensions, keratin extensions and I-tips.
               </p>
             </div>
           </div>
@@ -34,7 +35,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

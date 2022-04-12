@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonials = () => {
   return (
-    <section className="bg-white body-font">
+    <section id="testimonials" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
         <h1 className="text-3xl font-medium title-font text-black mb-20 text-center">
           Testimonials
