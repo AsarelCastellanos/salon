@@ -19,10 +19,10 @@ const Services = () => {
           <table className="table-auto w-full text-left whitespace-no-wrap">
             <thead>
               <tr>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-base-100 rounded-tl rounded-bl">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-neutral rounded-tl rounded-bl">
                   Service
                 </th>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-base-100 rounded-tr rounded-br">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-neutral rounded-tr rounded-br">
                   Pricing
                 </th>
               </tr>
@@ -33,7 +33,7 @@ const Services = () => {
                   Root Color
                 </td>
                 <td className="text-black bg-white px-4 py-3">
-                  $70 +
+                  $70+
                 </td>
               </tr>
               <tr>
@@ -41,7 +41,7 @@ const Services = () => {
                   Haircut
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $60 +
+                  $60+
                 </td>
               </tr>
               <tr>
@@ -49,7 +49,7 @@ const Services = () => {
                   Full Color
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $150 +
+                  $150+
                 </td>
               </tr>
               <tr>
@@ -57,7 +57,7 @@ const Services = () => {
                   Partial Balayage
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $150 +
+                  $150+
                 </td>
               </tr>
               <tr>
@@ -65,7 +65,7 @@ const Services = () => {
                   Balayage
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $210 +
+                  $210+
                 </td>
               </tr>
               <tr>
@@ -73,7 +73,7 @@ const Services = () => {
                   Partial Foil
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $85 +
+                  $85+
                 </td>
               </tr>
               <tr>
@@ -81,7 +81,7 @@ const Services = () => {
                   Full Foil
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                 $125 +
+                 $125+
                 </td>
               </tr>
               <tr>
@@ -89,7 +89,7 @@ const Services = () => {
                   Full Babylight
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $250 +
+                  $250+
                 </td>
               </tr>
               <tr>
@@ -97,7 +97,7 @@ const Services = () => {
                   Full Bleach Out
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $300 +
+                  $300+
                 </td>
               </tr>
               <tr>
@@ -105,7 +105,7 @@ const Services = () => {
                   Bleach Root Touch Up (6 Weeks)
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $100 +
+                  $100+
                 </td>
               </tr>
               <tr>
@@ -113,7 +113,7 @@ const Services = () => {
                   Root Shadow
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $25 +
+                  $25+
                 </td>
               </tr>
               <tr>
