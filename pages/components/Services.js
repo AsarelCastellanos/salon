@@ -19,10 +19,10 @@ const Services = () => {
           <table className="table-auto w-full text-left whitespace-no-wrap">
             <thead>
               <tr>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-neutral rounded-tl rounded-bl">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-neutral rounded-tl rounded-bl">
                   Service
                 </th>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-black text-sm bg-neutral rounded-tr rounded-br">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-neutral rounded-tr rounded-br">
                   Pricing
                 </th>
               </tr>

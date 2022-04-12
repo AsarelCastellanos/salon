@@ -13,7 +13,7 @@ const Home = () => {
                 <span className="block">Vicious Streak Salon</span>
                 <span className="block text-primary">by Vidalia Arellano</span>
               </h1>
-              <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              <p className="mt-3 max-w-md mx-auto text-base text-black sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 I&apos;m a hair vivids specialist and a hair extension
                 specialist located in Santa Ana, California. Certified with
                 Bellami Hair. I specialize in sew-in extensions, beaded wefts,
