@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Testimonials = () => {
@@ -10,11 +11,16 @@ const Testimonials = () => {
         <div className="flex flex-wrap -m-4">
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div className="h-full text-center">
-              <img
-                alt="testimonial"
-                className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100"
-                src="/profile/charles_b.jpg"
-              />
+              <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100">
+                <Image
+                  className="rounded-full"
+                  src="/profile/charles_b.jpg"
+                  alt="Charles"
+                  width="10"
+                  height="10"
+                  layout="responsive"
+                />
+              </div>
               <p className="leading-relaxed text-black">
                 I can&apos;t tell you how much I LOVE Vidalia. I have followed
                 her from salon to salon to now, as a small business owner
@@ -33,11 +39,16 @@ const Testimonials = () => {
           </div>
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
             <div className="h-full text-center">
-              <img
-                alt="testimonial"
-                className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100"
-                src="/profile/elyse_t.jpg"
-              />
+              <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100">
+                <Image
+                  className="rounded-full"
+                  src="/profile/elyse_t.jpg"
+                  alt="Elyse"
+                  width="10"
+                  height="10"
+                  layout="responsive"
+                />
+              </div>
               <p className="leading-relaxed text-black">
                 I&apos;ve been coming to Vidalia for over a year now and I can
                 say I trust her with my hair needs. It&apos;s been a struggle
@@ -56,11 +67,16 @@ const Testimonials = () => {
           </div>
           <div className="lg:w-1/3 lg:mb-0 p-4">
             <div className="h-full text-center">
-              <img
-                alt="testimonial"
-                className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100"
-                src="/profile/breeana_b.jpg"
-              />
+              <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-gray-100">
+                <Image
+                  className="rounded-full"
+                  src="/profile/breeana_b.jpg"
+                  alt="Breeana"
+                  width="10"
+                  height="10"
+                  layout="responsive"
+                />
+              </div>
               <p className="leading-relaxed text-black">
                 Vidalia is an extremely talented hairstylist, I&apos;ve been
                 going to her for many years and every time I&apos;ve gone
