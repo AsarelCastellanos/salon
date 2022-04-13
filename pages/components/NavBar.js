@@ -30,38 +30,36 @@ const NavBar = () => {
                   <div className="block lg:hidden mt-1">
                     <Image src="/logos/vss_logo.png" width="40" height="55" layout="intrinsic" alt="Vicious Streak Salon"/>
                   </div>
-                  <div className="hidden lg:block mt-1">
+                  <div className="flex-1 hidden lg:flex">
                     <Image src="/logos/vss_logo.png" width="50" height="60" layout="intrinsic" alt="Vicious Streak Salon"/>
+                    {/* <p className="text-white inline-flex items-center ml-4 text-xl font-medium uppercase">
+                      Vicious Streak Salon
+                    </p> */}
                   </div>
-                  {/* <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                    alt="Workflow"
-                  /> */}
                 </div>
                 {/* NavBar Links */}
                 <div className="hidden md:ml-6 md:flex md:space-x-2">
                   <a
                     href="#home"
-                    className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
                     Home
                   </a>
                   <a
                     href="#service"
-                    className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
                     Services
                   </a>
                   <a
                     href="#testimonials"
-                    className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
                     Testimonials
                   </a>
                   <a
                     href="#find-us"
-                    className="btn btn-ghost text-white hover:border-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
                     Find Us
                   </a>
