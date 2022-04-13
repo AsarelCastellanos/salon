@@ -70,7 +70,7 @@ const NavBar = () => {
               {/* Book A Consult Button */}
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <ConsultButton />
+                  <ConsultButton style={"btn btn-ghost relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white"}/>
                 </div>
               </div>
             </div>

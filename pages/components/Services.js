@@ -1,3 +1,4 @@
+import ConsultButton from "./ConsultButton";
 import React from "react";
 
 const Services = () => {
@@ -19,10 +20,10 @@ const Services = () => {
           <table className="table-auto w-full text-left whitespace-no-wrap">
             <thead>
               <tr>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-neutral rounded-tl rounded-bl">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-secondary rounded-tl rounded-bl">
                   Service
                 </th>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-neutral rounded-tr rounded-br">
+                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-secondary rounded-tr rounded-br">
                   Pricing
                 </th>
               </tr>
@@ -136,9 +137,7 @@ const Services = () => {
           </table>
         </div>
         <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-          <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
-            Button
-          </button>
+          <ConsultButton style={"flex ml-auto text-white border-0 py-2 px-6 btn btn-secondary rounded"}/>
         </div>
       </div>
     </section>
