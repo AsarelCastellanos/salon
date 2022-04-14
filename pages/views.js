@@ -3,6 +3,7 @@ import React from "react";
 // Importing Sections of the Website
 import Home from "./components/Home";
 import Services from "./components/Services";
+import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 // import LogoCloud from "./components/LogoCloud"
 import FindUs from "./components/FindUs";
@@ -16,6 +17,7 @@ const Views = () => {
       </Head>
       <Home />
       <Services />
+      {/* <Gallery /> */}
       <Testimonials />
       {/* <LogoCloud /> */}
       <FindUs />
