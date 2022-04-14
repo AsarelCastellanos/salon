@@ -10,9 +10,7 @@ const Services = () => {
             Our Services
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-white text-base">
-            It is high encouraged to first book a consult so we may discuss
-            specifics and so I can also better grasp the nature of your
-            appointment. Below are our starting prices. They may vary depeding
+            Below you&apos;ll find our starting prices. They will vary depending
             on hair length, volume and texture.
           </p>
         </div>
