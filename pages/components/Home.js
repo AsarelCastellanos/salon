@@ -30,7 +30,7 @@ const Home = () => {
           </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-lg shadow-lg">
-              <Image src={salon} alt="Salon" layout="responsive" />
+              <Image src={salon} alt="Salon" layout="responsive" priority="true"/>
             </div>
           </div>
         </div>
