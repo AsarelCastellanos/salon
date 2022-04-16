@@ -5,9 +5,9 @@ const Gallery = () => {
   return (
     <section className="bg-white body-font">
       <div className="container text-center px-5 py-24 mx-auto">
-        <div class="flex flex-col text-center w-full mb-8">
-          <h1 class="sm:text-3xl text-2xl font-extrabold title-font text-black">Gallery</h1>
-          <p class="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have exmaples of some of the extentions, vivids, bleaches we've done in the past. Hover over an image so you can view a short description of what we've done with their hair.</p>
+        <div className="flex flex-col text-center w-full mb-8">
+          <h1 className="sm:text-3xl text-2xl font-extrabold title-font text-black">Gallery</h1>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have exmaples of some of the extentions, vivids, bleaches we&apos;ve done in the past. Hover over an image so you can view a short description of what we&apos;ve done with their hair.</p>
         </div>
         {/* Image Div */}
         <div className="flex flex-wrap -m-4">
@@ -54,9 +54,9 @@ const Gallery = () => {
               </div>
             </div>
           </div>
-          {/* <div class="flex flex-col text-center w-full mb-8">
-            <h1 class="sm:text-3xl text-2xl font-extrabold title-font text-black">Gallery</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have exmaples of some of the extentions, vivids, bleaches we've done in the past. Hover over an image so you can view a short description of what we've done with their hair.</p>
+          {/* <div className="flex flex-col text-center w-full mb-8">
+            <h1 className="sm:text-3xl text-2xl font-extrabold title-font text-black">Gallery</h1>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have exmaples of some of the extentions, vivids, bleaches we've done in the past. Hover over an image so you can view a short description of what we've done with their hair.</p>
           </div> */}
         </div>
       </div>
