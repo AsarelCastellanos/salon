@@ -18,6 +18,7 @@ const NavBar = () => {
                   {/* Mobile menu button */}
                   <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
+                    {/* If open the menu then show X-Icon otherwise show the Menu-Icon */}
                     {open ? (
                       <XIcon className="block h-6 w-6" aria-hidden="true" />
                     ) : (
@@ -32,9 +33,6 @@ const NavBar = () => {
                   </div>
                   <div className="flex-1 hidden lg:flex">
                     <Image src="/logos/vss_logo.png" width="50" height="60" layout="intrinsic" alt="Vicious Streak Salon"/>
-                    {/* <p className="text-white inline-flex items-center ml-4 text-xl font-medium uppercase">
-                      Vicious Streak Salon
-                    </p> */}
                   </div>
                 </div>
                 {/* NavBar Links */}
@@ -77,7 +75,7 @@ const NavBar = () => {
           {/* Mobile Menu */}
           <Disclosure.Panel className="md:hidden">
             <div className="pt-2 pb-3 space-y-1">
-              {/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
+              {/* Mobile Menu Links */}
               <Disclosure.Button
                 as="a"
                 href="#home"

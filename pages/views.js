@@ -17,7 +17,7 @@ const Views = () => {
       </Head>
       <Home />
       <Services />
-      {/* <Gallery /> */}
+      <Gallery />
       <Testimonials />
       {/* <LogoCloud /> */}
       <FindUs />

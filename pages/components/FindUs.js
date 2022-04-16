@@ -4,7 +4,6 @@ const FindUs = () => {
   return (
     <section id="find-us" className="text-gray-600 body-font relative pt-16">
       <div className="absolute inset-0 bg-gray-300">
-        
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2280.01335619748!2d-117.83836124597619!3d33.76087036837357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd983c907cd91%3A0xf3316f54c1069904!2sPhenix%20Salon%20Suites%20-%20Santa%20Ana!5e0!3m2!1sen!2sus!4v1649838544289!5m2!1sen!2sus"
           className="w-full h-full opacity-80 brightness-100"
