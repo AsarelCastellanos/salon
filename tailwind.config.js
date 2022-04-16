@@ -1,12 +1,12 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {},
   },
-  // Adding DaisyUI Plugin
+  // Adding DaisyUI Plugin and Tailwind-Elements Plugin (For Carousel)
   plugins: [
     require("daisyui"),
   ],

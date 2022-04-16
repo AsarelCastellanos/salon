@@ -12,8 +12,6 @@ function MyApp({ Component, pageProps }) {
           content="Vicious Streak Salon by Vidalia Arellano. I'm a hair vivids specialist and a hair extension specialist located in Santa Ana, California. Certified with Bellami Hair."
         />
         <meta name="author" content="Vidalia Arellano" />
-        <meta name="author" content="Asarel Castellanos" />
-
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.viciousstreaksalon.com" />

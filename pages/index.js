@@ -8,9 +8,9 @@ import Footer from "./components/Footer"
 export default function Home() {
   return (
     <>
-    <NavBar />
-    <Views />
-    <Footer />
+      <NavBar />
+      <Views />
+      <Footer />
     </>
   )
 }
