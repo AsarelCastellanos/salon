@@ -5,10 +5,8 @@ import Home from "./components/Home";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
-// import LogoCloud from "./components/LogoCloud"
 import FindUs from "./components/FindUs";
 import Head from "next/head";
-
 const Views = () => {
   return (
     <>
@@ -19,7 +17,6 @@ const Views = () => {
       <Services />
       <Gallery />
       <Testimonials />
-      {/* <LogoCloud /> */}
       <FindUs />
     </>
   );
