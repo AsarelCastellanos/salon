@@ -9,6 +9,7 @@ module.exports = {
   // Adding DaisyUI Plugin and Tailwind-Elements Plugin (For Carousel)
   plugins: [
     require("daisyui"),
+    require('@tailwindcss/typography'),
   ],
   // Adding Custom DaisyUI Configurations
   daisyui: {
