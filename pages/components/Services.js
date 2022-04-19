@@ -101,7 +101,7 @@ const Services = () => {
               </tr>
               <tr>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Bleach Root Touch Up (6 Weeks)
+                  Bleach Root Touch Up (Max 6 Weeks)
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
                   $100+
@@ -117,7 +117,7 @@ const Services = () => {
               </tr>
               <tr>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  For Additional Toners
+                  Additional Toners
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
                   $30 - $60
@@ -125,7 +125,7 @@ const Services = () => {
               </tr>
               <tr>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  For Additional Vidids
+                  Additional Vivids
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
                   $80 - $150
