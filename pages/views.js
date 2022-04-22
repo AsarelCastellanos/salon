@@ -18,7 +18,7 @@ const Views = ({ props }) => {
   return (
     <>
       <Head>
-        <title>Vicious Streak Salon</title>
+        <title>{props[0].title}</title>
       </Head>
       <Home props={homeData}/>
       <Services />
