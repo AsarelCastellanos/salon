@@ -2,7 +2,7 @@ import Image from "next/image";
 import salon from "../../public/profile/salon_2.jpg";
 import React from "react";
 
-const Home = () => {
+const Home = ({ props }) => {
   return (
     <section id="home" className="bg-gray-50">
       <div className="relative overflow-hidden">
@@ -10,14 +10,11 @@ const Home = () => {
           <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
             <div className="text-center">
               <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block">Vicious Streak Salon</span>
+                <span className="block">{props.title}</span>
                 <span className="block text-primary">by Vidalia Arellano</span>
               </h1>
               <p className="mt-3 max-w-md mx-auto text-base text-black sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                I&apos;m a hair vivids specialist and a hair extension
-                specialist located in Santa Ana, California. Certified with
-                Bellami Hair. I specialize in sew-in extensions, beaded wefts,
-                tape in extensions, keratin extensions and I-tips.
+                {props.description}
               </p>
             </div>
           </div>

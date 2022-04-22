@@ -10,12 +10,17 @@ import Head from "next/head";
 
 const Views = ({ props }) => {
   console.log(props);
+  const homeData = {
+    title: props[0].title,
+    description: props[0].description,
+    image: props[0].image.asset,
+  }
   return (
     <>
       <Head>
         <title>Vicious Streak Salon</title>
       </Head>
-      <Home />
+      <Home props={homeData}/>
       <Services />
       <Gallery />
       <Testimonials />
