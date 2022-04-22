@@ -8,19 +8,13 @@ import Testimonials from "./components/Testimonials";
 import FindUs from "./components/FindUs";
 import Head from "next/head";
 
-const Views = ({ props }) => {
-  console.log(props);
-  const homeData = {
-    title: props[0].title,
-    description: props[0].description,
-    image: props[0].image.asset,
-  }
+const Views = () => {
   return (
     <>
       <Head>
-        <title>{props[0].title}</title>
+        <title>Vicious Streak Salon</title>
       </Head>
-      <Home props={homeData}/>
+      <Home/>
       <Services />
       <Gallery />
       <Testimonials />
