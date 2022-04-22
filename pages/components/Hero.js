@@ -2,9 +2,9 @@ import Image from "next/image";
 import salon from "../../public/profile/salon_2.jpg";
 import React from "react";
 
-const Home = () => {
+const Hero = () => {
   return (
-    <section id="home" className="bg-gray-50">
+    <section id="hero" className="bg-gray-50">
       <div className="relative overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
           <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
@@ -39,4 +39,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;

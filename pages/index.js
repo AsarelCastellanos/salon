@@ -1,21 +1,33 @@
 import NavBar from "./components/NavBar"
-import Views from "./views"
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
+import FindUs from "./components/FindUs";
 import Footer from "./components/Footer"
+
+import Head from "next/head";
 
 import { sanityClient } from "../lib/sanity"
 
 
 export default function Home({ data }) {
-  console.log(data)
+  console.log(data);
   return (
     <>
       <NavBar />
-      <Views/>
+      <Head>
+        <title>Vicious Streak Salon</title>
+      </Head>
+      <Hero />
+      <Services />
+      <Gallery />
+      <Testimonials />
+      <FindUs />
       <Footer />
     </>
   )
 }
-
 
 export const getServerSideProps = async () => {
   const query = '*[ _type == "website"]'
@@ -30,7 +42,7 @@ export const getServerSideProps = async () => {
   } else {
     return {
       props: {
-        data,
+        data
       },
     }
   }
