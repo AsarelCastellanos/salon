@@ -7,7 +7,9 @@ import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import FindUs from "./components/FindUs";
 import Head from "next/head";
-const Views = () => {
+
+const Views = ({ props }) => {
+  console.log(props);
   return (
     <>
       <Head>
