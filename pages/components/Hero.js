@@ -28,7 +28,7 @@ const Hero = ({title, description, image}) => {
           </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-lg">
-              <img src={urlFor(image).url()} alt="Salon" width="719" height="480" layout="responsive" priority="true" unoptimized={true} />
+              <img src={urlFor(image).url()} alt="Salon" className="w-full"/>
             </div>
           </div>
         </div>
