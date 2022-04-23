@@ -1,6 +1,6 @@
-import {groq} from 'next-sanity'
-import {usePreviewSubscription, urlFor} from '../lib/sanity'
-import {getClient} from '../lib/sanity.server'
+import { groq} from 'next-sanity'
+import { usePreviewSubscription } from '../lib/sanity'
+import { getClient } from '../lib/sanity.server'
 
 import Hero from './components/Hero';
 
