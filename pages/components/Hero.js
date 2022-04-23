@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { urlFor} from '../../lib/sanity'
+import { urlFor } from '../../lib/sanity'
 import React from "react";
 
-const Hero = ({title, description, image}) => {
+const Hero = ({ title, description, image }) => {
 
   return (
     <section id="hero" className="bg-gray-50">
@@ -28,7 +28,7 @@ const Hero = ({title, description, image}) => {
           </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-lg">
-              <img src={urlFor(image).url()} alt="Salon" className="w-full"/>
+              <img src={urlFor(image).url()}/>
             </div>
           </div>
         </div>
