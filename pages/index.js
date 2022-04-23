@@ -1,49 +1,36 @@
-import NavBar from "./components/NavBar"
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Gallery from "./components/Gallery";
-import Testimonials from "./components/Testimonials";
-import FindUs from "./components/FindUs";
-import Footer from "./components/Footer"
+import {groq} from 'next-sanity'
+import {usePreviewSubscription, urlFor} from '../lib/sanity'
+import {getClient} from '../lib/sanity.server'
 
-import Head from "next/head";
+import Hero from './components/Hero';
 
-import { sanityClient } from "../lib/sanity"
+const websiteQuery = groq`*[ _type == 'website'][0]`
 
-
-export default function Home({ data }) {
+export default function Home({data, preview}) {
   console.log(data);
+
+  const {data: website} = usePreviewSubscription(websiteQuery, {
+    initialData: data.website,
+    enabled: preview,
+  })
+
+  console.log(website);
+
+  const { businessHours, description, extensionDescription, extensions, image, services, testimonials, title, vividDescription, vivids } = website;
+
   return (
     <>
-      <NavBar />
-      <Head>
-        <title>Vicious Streak Salon</title>
-      </Head>
-      <Hero />
-      <Services />
-      <Gallery />
-      <Testimonials />
-      <FindUs />
-      <Footer />
+      <Hero title={title} description={description} image={image}/>
     </>
   )
 }
 
-export const getServerSideProps = async () => {
-  const query = '*[ _type == "website"]'
-  const data = await sanityClient.fetch(query)
-
-  if (!data.length) {
-    return {
-      props: {
-        data: [],
-      },
-    }
-  } else {
-    return {
-      props: {
-        data
-      },
-    }
+export async function getStaticProps({preview = true}) {
+  const website = await getClient(preview).fetch(websiteQuery)
+  return {
+    props: {
+      preview,
+      data: { website },
+    },
   }
 }

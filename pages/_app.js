@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Layout from "./layout";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -41,7 +42,9 @@ function MyApp({ Component, pageProps }) {
           content="/profile/salon.jpg"
         />
       </Head>
-      <Component {...pageProps} />
+      <Layout >
+       <Component {...pageProps} />
+    </Layout>
     </>
   );
 }
