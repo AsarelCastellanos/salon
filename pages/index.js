@@ -16,11 +16,11 @@ const websiteQuery = groq`*[ _type == 'website'][0]{
   vividDescription
 }`;
 
-const servicesQuery = groq`*[_type == "services"] | order(_createdAt asc){
-  _id,
-  name,
-  price
-}`
+// const servicesQuery = groq`*[_type == "services"] | order(_createdAt asc){
+//   _id,
+//   name,
+//   price
+// }`
 
 export default function Home({ data, preview }) {
   const { data: website } = usePreviewSubscription(websiteQuery, {
@@ -39,7 +39,7 @@ export default function Home({ data, preview }) {
   return (
     <>
       <Hero title={title} description={description} image={image} />
-      <Services services={services}/>
+      <Services/>
       <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
       <Testimonials />
       <FindUs />
@@ -49,12 +49,12 @@ export default function Home({ data, preview }) {
 
 export async function getStaticProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
-  const services = await getClient(preview).fetch(servicesQuery);
+  // const services = await getClient(preview).fetch(servicesQuery);
 
   return {
     props: {
       preview,
-      data: { website, services },
+      data: { website },
     },
   };
 }

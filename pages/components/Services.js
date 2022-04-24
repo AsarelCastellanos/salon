@@ -1,7 +1,7 @@
 import ConsultButton from "./ConsultButton";
 import React from "react";
 
-const Services = ({ services }) => {
+const Services = () => {
   return (
     <section id="service" className="bg-primary body-font">
       <div className="container px-5 py-24 mx-auto">
