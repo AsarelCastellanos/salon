@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { usePreviewSubscription, urlFor } from "../lib/sanity";
+import { usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 
 import Hero from "./components/Hero";
@@ -16,32 +16,36 @@ const websiteQuery = groq`*[ _type == 'website'][0]{
   vividDescription
 }`;
 
-// const servicesQuery = groq`*[_type == "services"] | order(_createdAt asc){
-//   _id,
-//   name,
-//   price
-// }`
+const testimonialsQuery = groq`*[_type == "testimonials"]{
+  _id,
+  date,
+  name,
+  description,
+  'image':image.asset->url
+}`;
 
 export default function Home({ data, preview }) {
+
   const { data: website } = usePreviewSubscription(websiteQuery, {
     initialData: data.website,
     enabled: preview,
   });
 
-  // const { data: services } = usePreviewSubscription(servicesQuery, {
-  //   initialData: data.services,
-  //   enabled: preview,
-  // });
+  const { data: testimonials } = usePreviewSubscription(testimonialsQuery, {
+    initialData: data.testimonials,
+    enabled: preview,
+  });
 
   const { description, extensionDescription, image, title, vividDescription } =
     website;
+
 
   return (
     <>
       <Hero title={title} description={description} image={image} />
       <Services/>
       <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
-      <Testimonials />
+      <Testimonials testimonials={testimonials}/>
       <FindUs />
     </>
   );
@@ -49,12 +53,12 @@ export default function Home({ data, preview }) {
 
 export async function getStaticProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
-  // const services = await getClient(preview).fetch(servicesQuery);
+  const testimonials = await getClient(preview).fetch(testimonialsQuery);
 
   return {
     props: {
       preview,
-      data: { website },
+      data: { website, testimonials },
     },
   };
 }
