@@ -53,7 +53,7 @@ export default function Home({ data, preview }) {
             Testimonials
           </h1>
           <div className="flex flex-wrap -m-4">
-            {testimonials.map((testimonial) => {
+            {testimonials && testimonials.map((testimonial) => {
               return (
                 <div
                   key={testimonial._id}
