@@ -1,7 +1,8 @@
 import ConsultButton from "./ConsultButton";
 import React from "react";
 
-const Services = () => {
+const Services = ({ services }) => {
+  console.log(services);
   return (
     <section id="service" className="bg-primary body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -28,12 +29,8 @@ const Services = () => {
             </thead>
             <tbody>
               <tr>
-                <td className="text-black bg-white px-4 py-3">
-                  Root Color
-                </td>
-                <td className="text-black bg-white px-4 py-3">
-                  $70+
-                </td>
+                <td className="text-black bg-white px-4 py-3">Root Color</td>
+                <td className="text-black bg-white px-4 py-3">$70+</td>
               </tr>
               <tr>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
@@ -80,7 +77,7 @@ const Services = () => {
                   Full Foil
                 </td>
                 <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                 $125+
+                  $125+
                 </td>
               </tr>
               <tr>
@@ -135,7 +132,11 @@ const Services = () => {
           </table>
         </div>
         <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-          <ConsultButton style={"flex ml-auto text-white border-0 py-2 px-6 btn btn-secondary rounded"}/>
+          <ConsultButton
+            style={
+              "flex ml-auto text-white border-0 py-2 px-6 btn btn-secondary rounded"
+            }
+          />
         </div>
       </div>
     </section>

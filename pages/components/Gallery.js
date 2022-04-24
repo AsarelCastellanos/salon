@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Gallery = () => {
+const Gallery = ({extensionDescription, vividDescription}) => {
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container text-center px-5 py-24 mx-auto">
@@ -10,7 +10,7 @@ const Gallery = () => {
         </div>
         <div className="flex flex-col text-center w-full mb-8">
           <h1 className="sm:text-3xl text-2xl font-extrabold title-font text-black">Extensions</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have examples of extensions. You can hover over the images to see how the extensions look under the hair.</p>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">{extensionDescription}</p>
         </div>
         {/* Image Div */}
         <div className="flex flex-wrap -m-4">
@@ -53,7 +53,7 @@ const Gallery = () => {
           {/* Vivid Hair */}
           <div className="flex flex-col text-center w-full mt-10 mb-8">
             <h1 className="sm:text-3xl text-2xl font-extrabold title-font text-black">Vivid Hair</h1>
-            <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">Below we have exmaples of the vivid hair we have done in the past. Hover over an image so you can view a short description of what we have done with their hair.</p>
+            <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">{vividDescription}</p>
           </div>
           {/* First Vivid  */}
           <div className="lg:w-1/4 sm:w-1/2 p-4">
