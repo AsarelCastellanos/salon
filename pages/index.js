@@ -1,5 +1,5 @@
 import { groq} from 'next-sanity'
-import { usePreviewSubscription } from '../lib/sanity'
+import { usePreviewSubscription, urlFor } from '../lib/sanity'
 import { getClient } from '../lib/sanity.server'
 
 import Hero from './components/Hero';
@@ -20,7 +20,8 @@ export default function Home({data, preview}) {
 
   return (
     <>
-      <Hero title={title} description={description} image={image}/>
+      <Hero title={title} description={description}/>
+      <img src={urlFor(image).url()} />
     </>
   )
 }

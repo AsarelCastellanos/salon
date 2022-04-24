@@ -28,7 +28,7 @@ const Hero = ({ title, description, image }) => {
           </div>
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-lg">
-              <img src={urlFor(image).url()}/>
+              {/* <img src={urlFor(image).url()}/> */}
             </div>
           </div>
         </div>
