@@ -26,7 +26,7 @@ const Testimonials = ({ testimonials }) => {
                   <p className="leading-relaxed text-white">
                     {testimonial.description}
                   </p>
-                  <span className="inline-block h-1 w-10 rounded bg-primary mt-6 mb-4"></span>
+                  <span className="inline-block h-1 w-10 rounded bg-primary mt-2 mb-2"></span>
                   <h2 className="text-white font-medium title-font tracking-wider text-sm">
                     {testimonial.name}
                   </h2>
