@@ -28,10 +28,10 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { data: services } = usePreviewSubscription(servicesQuery, {
-    initialData: data.services,
-    enabled: preview,
-  });
+  // const { data: services } = usePreviewSubscription(servicesQuery, {
+  //   initialData: data.services,
+  //   enabled: preview,
+  // });
 
   const { description, extensionDescription, image, title, vividDescription } =
     website;
