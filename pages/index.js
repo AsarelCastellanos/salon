@@ -24,7 +24,7 @@ const testimonialsQuery = groq`*[_type == "testimonials"]{
   'image':image.asset->url
 }`;
 
-const testimonials = [{
+let testimonials = [{
   _id: '0001',
   date: '01012001',
   name: 'Testing...',
@@ -60,7 +60,7 @@ export default function Home({ data, preview }) {
 
 export async function getStaticProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
-  const testimonials = await getClient(preview).fetch(testimonialsQuery);
+  testimonials = await getClient(preview).fetch(testimonialsQuery);
 
   return {
     props: {
