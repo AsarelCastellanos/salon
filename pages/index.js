@@ -1,5 +1,5 @@
 import { groq } from "next-sanity";
-import { usePreviewSubscription, urlFor } from "../lib/sanity";
+import { usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 
 import Hero from "./components/Hero";
@@ -24,14 +24,6 @@ const testimonialsQuery = groq`*[_type == "testimonials"]{
   'image':image.asset->url
 }`;
 
-let testimonials = [{
-  _id: '0001',
-  date: '01012001',
-  name: 'Testing...',
-  description: 'Testing...',
-  image: 'image'
-}];
-
 export default function Home({ data, preview }) {
 
   const { data: website } = usePreviewSubscription(websiteQuery, {
@@ -47,6 +39,8 @@ export default function Home({ data, preview }) {
   const { description, extensionDescription, image, title, vividDescription } =
     website;
 
+  console.log(testimonials);
+
   return (
     <>
       <Hero title={title} description={description} image={image} />
@@ -58,9 +52,10 @@ export default function Home({ data, preview }) {
   );
 }
 
-export async function getStaticProps({ preview = true }) {
+
+export async function getServerSideProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
-  testimonials = await getClient(preview).fetch(testimonialsQuery);
+  const testimonials = await getClient(preview).fetch(testimonialsQuery);
 
   return {
     props: {

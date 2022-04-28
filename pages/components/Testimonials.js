@@ -9,7 +9,7 @@ const Testimonials = ({ testimonials }) => {
           Testimonials
         </h1>
         <div className="flex flex-wrap -m-4">
-          {testimonials.map((testimonial) => {
+          {testimonials?.map((testimonial) => {
             return (
               <div key={testimonial._id} className="lg:w-1/3 lg:mb-0 mb-6 p-4">
                 <div className="h-full text-center">
