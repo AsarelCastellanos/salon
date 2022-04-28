@@ -30,6 +30,17 @@ const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
   price
 }`;
 
+const hoursQuery = groq`*[ _type == "businessHours"][0]{
+  _id,
+  monday,
+  tuesday,
+  wednesday,
+  thursday,
+  friday,
+  saturday,
+  sunday
+}`;
+
 export default function Home({ data, preview }) {
 
   const { data: website } = usePreviewSubscription(websiteQuery, {
@@ -41,10 +52,17 @@ export default function Home({ data, preview }) {
     initialData: data.testimonials,
     enabled: preview,
   });
+
   const { data: services } = usePreviewSubscription(servicesQuery, {
     initialData: data.services,
     enabled: preview,
   });
+
+  const { data: hours } = usePreviewSubscription(hoursQuery, {
+    initialData: data.hours,
+    enabled: preview,
+  });
+
 
   const { description, extensionDescription, image, title, vividDescription } =
     website;
@@ -55,7 +73,7 @@ export default function Home({ data, preview }) {
       <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
       <Testimonials testimonials={testimonials}/>
-      <FindUs />
+      <FindUs hours={hours}/>
     </>
   );
 }
@@ -65,11 +83,13 @@ export async function getServerSideProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
   const testimonials = await getClient(preview).fetch(testimonialsQuery);
   const services = await getClient(preview).fetch(servicesQuery);
+  const hours = await getClient(preview).fetch(hoursQuery);
+
 
   return {
     props: {
       preview,
-      data: { website, testimonials, services },
+      data: { website, testimonials, services, hours },
     },
   };
 }

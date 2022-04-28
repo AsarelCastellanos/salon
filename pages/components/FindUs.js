@@ -1,6 +1,6 @@
 import React from "react";
 
-const FindUs = () => {
+const FindUs = ({ hours }) => {
   return (
     <section id="find-us" className="text-gray-600 body-font relative pt-16">
       <div className="absolute inset-0 bg-gray-300">
@@ -25,21 +25,21 @@ const FindUs = () => {
           <h2 className="title-font font-medium text-black tracking-wider text-md">
             REGULAR HOURS
           </h2>
-          <p className="leading-relaxed text-black mt-1">Monday: CLOSED</p>
-          <p className="leading-relaxed	text-black mt-1">Tuesdy: CLOSED</p>
+          <p className="leading-relaxed text-black mt-1">Monday: {hours.monday}</p>
+          <p className="leading-relaxed	text-black mt-1">Tuesday: {hours.tuesday}</p>
           <p className="leading-relaxed text-black mt-1">
-            Wednesday: 12:00PM - 9:00PM
+            Wednesday: {hours.wednesday}
           </p>
           <p className="leading-relaxed text-black mt-1">
-            Thursday: 12:00PM - 8:00PM
+            Thursday: {hours.thursday}
           </p>
           <p className="leading-relaxed text-black mt-1">
-            Friday: 12:00PM - 8:00PM
+            Friday: {hours.friday}
           </p>
           <p className="leading-relaxed text-black mt-1">
-            Saturday: 9:00 AM - 5:00PM
+            Saturday: {hours.saturday}
           </p>
-          <p className="leading-relaxed text-black mt-1">Sunday: CLOSED</p>
+          <p className="leading-relaxed text-black mt-1">Sunday: {hours.sunday}</p>
           <h2 className="title-font font-medium text-black tracking-wider text-md mt-2">
             TEXT US
           </h2>
