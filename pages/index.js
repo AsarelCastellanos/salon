@@ -73,7 +73,7 @@ export default function Home({ data, preview }) {
       <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
       <Testimonials testimonials={testimonials}/>
-      <FindUs hours={hours}/>
+      {/* <FindUs hours={hours}/> */}
     </>
   );
 }
