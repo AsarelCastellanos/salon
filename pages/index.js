@@ -16,18 +16,32 @@ const websiteQuery = groq`*[ _type == 'website'][0]{
   vividDescription
 }`;
 
+const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
+  _id,
+  name,
+  price
+}`;
+
+const extensionsQuery = groq`*[ _type == "extensions"][0..4]{
+  _id,
+  name,
+  'bottomHair':bottomHair.asset->url,
+  'topHair':topHair.asset->url 
+}`;
+
+const vividsQuery = groq`*[ _type == "vivids"][0..4]{
+  _id,
+  name,
+  description,
+  'image':image.asset->url
+}`;
+
 const testimonialsQuery = groq`*[_type == "testimonials"]{
   _id,
   date,
   name,
   description,
   'image':image.asset->url
-}`;
-
-const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
-  _id,
-  name,
-  price
 }`;
 
 export default function Home({ data, preview }) {
@@ -37,13 +51,23 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { data: testimonials } = usePreviewSubscription(testimonialsQuery, {
-    initialData: data.testimonials,
+  const { data: services } = usePreviewSubscription(servicesQuery, {
+    initialData: data.services,
     enabled: preview,
   });
 
-  const { data: services } = usePreviewSubscription(servicesQuery, {
-    initialData: data.services,
+  const { data: extensions } = usePreviewSubscription(extensionsQuery, {
+    initialData: data.extensions,
+    enabled: preview,
+  });
+
+  const { data: vivids } = usePreviewSubscription(vividsQuery, {
+    initialData: data.vivids,
+    enabled: preview,
+  });
+
+  const { data: testimonials } = usePreviewSubscription(testimonialsQuery, {
+    initialData: data.testimonials,
     enabled: preview,
   });
 
@@ -54,7 +78,7 @@ export default function Home({ data, preview }) {
     <>
       <Hero title={title} description={description} image={image} />
       <Services services={services}/>
-      <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
+      <Gallery extensionDescription={extensionDescription} extensions={extensions} vividDescription={vividDescription} vivids={vivids}/>
       <Testimonials testimonials={testimonials}/>
       <FindUs />
     </>
@@ -63,13 +87,15 @@ export default function Home({ data, preview }) {
 
 export async function getServerSideProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
-  const testimonials = await getClient(preview).fetch(testimonialsQuery);
   const services = await getClient(preview).fetch(servicesQuery);
+  const extensions = await getClient(preview).fetch(extensionsQuery);
+  const vivids = await getClient(preview).fetch(vividsQuery);
+  const testimonials = await getClient(preview).fetch(testimonialsQuery);
 
   return {
     props: {
       preview,
-      data: { website, testimonials, services },
+      data: { website, services, extensions, vivids, testimonials },
     },
   };
 }
