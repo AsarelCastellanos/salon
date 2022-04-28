@@ -4,7 +4,7 @@ import React from "react";
 const Hero = ({ title, description, image }) => {
 
   return (
-    <section id="hero" className="bg-gray-50">
+    <section id="home" className="bg-gray-50">
       <div className="relative overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
           <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
