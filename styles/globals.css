@@ -6,7 +6,6 @@ html {
     font-family: 'PT Sans', sans-serif;
 }
 
-.w-22 {
-    width: 22rem;
-    margin: auto;
+.h-custom {
+    height: 26rem;
 }

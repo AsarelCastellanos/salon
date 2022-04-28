@@ -13,7 +13,14 @@ const websiteQuery = groq`*[ _type == 'website'][0]{
   extensionDescription,
   'image':image.asset->url,
   title,
-  vividDescription
+  vividDescription,
+  monday,
+  tuesday,
+  wednesday,
+  thursday,
+  friday,
+  saturday,
+  sunday,
 }`;
 
 const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
@@ -25,18 +32,18 @@ const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
 const extensionsQuery = groq`*[ _type == "extensions"][0..4]{
   _id,
   name,
-  'bottomHair':bottomHair.asset->url,
-  'topHair':topHair.asset->url 
+  bottomHair,
+  topHair 
 }`;
 
 const vividsQuery = groq`*[ _type == "vivids"][0..4]{
   _id,
   name,
   description,
-  'image':image.asset->url
+  image
 }`;
 
-const testimonialsQuery = groq`*[_type == "testimonials"]{
+const testimonialsQuery = groq`*[_type == "testimonials"][0..3] | order(date desc){
   _id,
   date,
   name,
@@ -71,7 +78,7 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { description, extensionDescription, image, title, vividDescription } =
+  const { description, extensionDescription, friday, image, monday, saturday, sunday, thursday, title, tuesday, vividDescription, wednesday } =
     website;
 
   return (
@@ -80,7 +87,7 @@ export default function Home({ data, preview }) {
       <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} extensions={extensions} vividDescription={vividDescription} vivids={vivids}/>
       <Testimonials testimonials={testimonials}/>
-      <FindUs />
+      <FindUs monday={monday} tuesday={tuesday} wednesday={wednesday} thursday={thursday} friday={friday} saturday={saturday} sunday={sunday}/>
     </>
   );
 }
