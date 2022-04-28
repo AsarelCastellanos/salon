@@ -1,6 +1,7 @@
 import React from "react";
 
 const FindUs = ({ hours }) => {
+  console.log(hours.monday);
   return (
     <section id="find-us" className="text-gray-600 body-font relative pt-16">
       <div className="absolute inset-0 bg-gray-300">
@@ -25,8 +26,12 @@ const FindUs = ({ hours }) => {
           <h2 className="title-font font-medium text-black tracking-wider text-md">
             REGULAR HOURS
           </h2>
-          <p className="leading-relaxed text-black mt-1">Monday: {hours.monday}</p>
-          <p className="leading-relaxed	text-black mt-1">Tuesday: {hours.tuesday}</p>
+          <p className="leading-relaxed text-black mt-1">
+            {/* Monday: {hours.monday} */}
+          </p>
+          <p className="leading-relaxed	text-black mt-1">
+            Tuesday: {hours.tuesday}
+          </p>
           <p className="leading-relaxed text-black mt-1">
             Wednesday: {hours.wednesday}
           </p>
@@ -39,7 +44,9 @@ const FindUs = ({ hours }) => {
           <p className="leading-relaxed text-black mt-1">
             Saturday: {hours.saturday}
           </p>
-          <p className="leading-relaxed text-black mt-1">Sunday: {hours.sunday}</p>
+          <p className="leading-relaxed text-black mt-1">
+            Sunday: {hours.sunday}
+          </p>
           <h2 className="title-font font-medium text-black tracking-wider text-md mt-2">
             TEXT US
           </h2>

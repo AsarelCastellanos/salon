@@ -85,7 +85,6 @@ export async function getServerSideProps({ preview = true }) {
   const services = await getClient(preview).fetch(servicesQuery);
   const hours = await getClient(preview).fetch(hoursQuery);
 
-
   return {
     props: {
       preview,
