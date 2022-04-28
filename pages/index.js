@@ -24,6 +24,12 @@ const testimonialsQuery = groq`*[_type == "testimonials"]{
   'image':image.asset->url
 }`;
 
+const servicesQuery = groq`*[ _type == "services"] | order(serviceOrder asc){
+  _id,
+  name,
+  price
+}`;
+
 export default function Home({ data, preview }) {
 
   const { data: website } = usePreviewSubscription(websiteQuery, {
@@ -35,16 +41,18 @@ export default function Home({ data, preview }) {
     initialData: data.testimonials,
     enabled: preview,
   });
+  const { data: services } = usePreviewSubscription(servicesQuery, {
+    initialData: data.services,
+    enabled: preview,
+  });
 
   const { description, extensionDescription, image, title, vividDescription } =
     website;
 
-  console.log(testimonials);
-
   return (
     <>
       <Hero title={title} description={description} image={image} />
-      <Services/>
+      <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} vividDescription={vividDescription}/>
       <Testimonials testimonials={testimonials}/>
       <FindUs />
@@ -56,11 +64,12 @@ export default function Home({ data, preview }) {
 export async function getServerSideProps({ preview = true }) {
   const website = await getClient(preview).fetch(websiteQuery);
   const testimonials = await getClient(preview).fetch(testimonialsQuery);
+  const services = await getClient(preview).fetch(servicesQuery);
 
   return {
     props: {
       preview,
-      data: { website, testimonials },
+      data: { website, testimonials, services },
     },
   };
 }

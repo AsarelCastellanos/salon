@@ -1,7 +1,8 @@
 import ConsultButton from "./ConsultButton";
 import React from "react";
 
-const Services = () => {
+const Services = ({ services }) => {
+  console.log(services);
   return (
     <section id="service" className="bg-primary body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -27,106 +28,18 @@ const Services = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td className="text-black bg-white px-4 py-3">Root Color</td>
-                <td className="text-black bg-white px-4 py-3">$70+</td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Haircut
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $60+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Full Color
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $150+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Partial Balayage
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $150+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Balayage
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $210+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Partial Foil
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $85+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Full Foil
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $125+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Full Babylight
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $250+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Full Bleach Out
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $300+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Bleach Root Touch Up (Max 6 Weeks)
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $100+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Root Shadow
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $25+
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Additional Toners
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $30 - $60
-                </td>
-              </tr>
-              <tr>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  Additional Vivids
-                </td>
-                <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
-                  $80 - $150
-                </td>
-              </tr>
+              {services?.map((service) => {
+                return (
+                  <tr key={service._id}>
+                    <td className="text-black bg-white px-4 py-3">
+                      {service.name}
+                    </td>
+                    <td className="text-black bg-white px-4 py-3">
+                      {service.price}
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
