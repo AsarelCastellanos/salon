@@ -51,9 +51,11 @@ const Gallery = ({
           })}
         </div>
         <div className="flex flex-col">
-          <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
-            <Link href="/extensions">View More Extensions</Link>
-          </button>
+          <Link href="/extensions" passHref>
+            <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+              View More Extensions
+            </button>
+          </Link>
         </div>
         <div className="flex flex-col text-center w-full mt-10 mb-10">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
@@ -82,9 +84,11 @@ const Gallery = ({
           })}
         </div>
         <div className="flex flex-col">
-          <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
-            <Link href="/vivids">View More Vivids</Link>
-          </button>
+        <Link href="/vivids" passHref>
+            <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+              View More vivids
+            </button>
+          </Link>
         </div>
       </div>
     </section>
