@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 import ConsultButton from "./ConsultButton";
 
@@ -53,7 +54,7 @@ const NavBar = () => {
                     href="#gallery"
                     className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                   >
-                    gallery
+                    Gallery
                   </a>
                   <a
                     href="#find-us"
@@ -95,7 +96,7 @@ const NavBar = () => {
                 href="#gallery"
                 className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                gallery
+                Gallery
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"

@@ -11,7 +11,7 @@ import FindUs from "./components/FindUs";
 const websiteQuery = groq`*[ _type == 'website'][0]{
   description,
   extensionDescription,
-  'image':image.asset->url,
+  image,
   title,
   vividDescription,
   monday,
@@ -48,7 +48,7 @@ const testimonialsQuery = groq`*[_type == "testimonials"][0..3] | order(date des
   date,
   name,
   description,
-  'image':image.asset->url
+  image
 }`;
 
 export default function Home({ data, preview }) {
@@ -87,7 +87,7 @@ export default function Home({ data, preview }) {
       <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} extensions={extensions} vividDescription={vividDescription} vivids={vivids}/>
       <Testimonials testimonials={testimonials}/>
-      <FindUs monday={monday} tuesday={tuesday} wednesday={wednesday} thursday={thursday} friday={friday} saturday={saturday} sunday={sunday}/>
+      {/* <FindUs monday={monday} tuesday={tuesday} wednesday={wednesday} thursday={thursday} friday={friday} saturday={saturday} sunday={sunday}/> */}
     </>
   );
 }

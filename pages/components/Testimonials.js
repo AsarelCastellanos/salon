@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
+import { urlFor } from "../../lib/sanity";
+
 const Testimonials = ({ testimonials }) => {
   return (
     <section id="testimonials" className="bg-primary body-font">
@@ -16,11 +18,11 @@ const Testimonials = ({ testimonials }) => {
                   <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-white bg-gray-100">
                     <Image
                       className="rounded-full"
-                      src={testimonial.image}
+                      src={urlFor(testimonial.image).url()}
                       alt="Charles"
-                      width="10"
-                      height="10"
-                      layout="responsive"
+                      width="80"
+                      height="80"
+                      loading="lazy"
                     />
                   </div>
                   <p className="leading-relaxed text-white">
