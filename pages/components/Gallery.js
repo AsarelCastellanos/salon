@@ -49,8 +49,10 @@ const Gallery = ({
               </div>
             );
           })}
-          <button className="col-span-4 content-center btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
-          <Link href="/extensions">View More Extensions</Link>
+        </div>
+        <div className="flex flex-col">
+          <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+            <Link href="/extensions">View More Extensions</Link>
           </button>
         </div>
         <div className="flex flex-col text-center w-full mt-10 mb-10">
@@ -68,18 +70,19 @@ const Gallery = ({
           {vivids?.map((vivid) => {
             return (
               <div className="m-4" key={vivid._id}>
-
-                  <Image
-                    src={urlFor(vivid.image).url()}
-                    alt={vivid.name}
-                    loading="lazy"
-                    width={318.69}
-                    height={415.99}
-                  />
+                <Image
+                  src={urlFor(vivid.image).url()}
+                  alt={vivid.name}
+                  loading="lazy"
+                  width={318.69}
+                  height={415.99}
+                />
               </div>
             );
           })}
-          <button className="col-span-4 content-center btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+        </div>
+        <div className="flex flex-col">
+          <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
             <Link href="/vivids">View More Vivids</Link>
           </button>
         </div>

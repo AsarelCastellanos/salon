@@ -21,10 +21,7 @@ function MyApp({ Component, pageProps }) {
           property="og:description"
           content="Vicious Streak Salon by Vidalia Arellano. I'm a hair vivids specialist and a hair extension specialist located in Santa Ana, California. Certified with Bellami Hair."
         />
-        <meta
-          property="og:image"
-          content="/profile/salon.jpg"
-        />
+        <meta property="og:image" content="/profile/salon.jpg" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -37,14 +34,11 @@ function MyApp({ Component, pageProps }) {
           property="twitter:description"
           content="Vicious Streak Salon by Vidalia Arellano. I'm a hair vivids specialist and a hair extension specialist located in Santa Ana, California. Certified with Bellami Hair."
         />
-        <meta
-          property="twitter:image"
-          content="/profile/salon.jpg"
-        />
+        <meta property="twitter:image" content="/profile/salon.jpg" />
       </Head>
-      <Layout >
-       <Component {...pageProps} />
-    </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
