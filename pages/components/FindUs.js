@@ -3,7 +3,7 @@ import ConsultButton from "./ConsultButton";
 
 const FindUs = ({ monday, tuesday, wednesday, thursday, friday, saturday, sunday }) => {
   return (
-    <div className="bg-white">
+    <div id="find-us" className="bg-white">
       <div className="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-extrabold text-black text-center">Find Us</h2>
         <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-2">
