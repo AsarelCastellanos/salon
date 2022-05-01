@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import ConsultButton from "./ConsultButton";
 
-import{ Disclosure } from '@headlessui/react'
-import  { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const NavBar = () => {
   return (
@@ -30,80 +30,70 @@ const NavBar = () => {
                 {/* Logo - First: Show when mobile. Second: Show when full-screen. */}
                 <div className="flex-shrink-0 flex items-center">
                   <div className="block lg:hidden mt-1">
-                    <Image src="/logos/vss_logo.png" width="40" height="55" layout="intrinsic" alt="Vicious Streak Salon"/>
+                    <Image src="/logos/vss_logo.png" width="40" height="55" layout="intrinsic" alt="Vicious Streak Salon" />
                   </div>
                   <div className="flex-1 hidden lg:flex">
-                    <Image src="/logos/vss_logo.png" width="50" height="60" layout="intrinsic" alt="Vicious Streak Salon"/>
+                    <Image src="/logos/vss_logo.png" width="50" height="60" layout="intrinsic" alt="Vicious Streak Salon" />
                   </div>
                 </div>
                 {/* NavBar Links */}
                 <div className="hidden md:ml-6 md:flex md:space-x-2">
-                  <a
-                    href="#home"
-                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="#service"
-                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
-                  >
-                    Services
-                  </a>
-                  <a
-                    href="#gallery"
-                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
-                  >
-                    Gallery
-                  </a>
-                  <a
-                    href="#find-us"
-                    className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
-                  >
-                    Find Us
-                  </a>
+                  <Link href="/">
+                    <p
+                      className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    >
+                      Home
+                    </p>
+                  </Link>
+                  <Link href="/extensions">
+                    <p
+                      className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    >
+                      Extensions
+                    </p>
+                  </Link>
+                  <Link href="/vivids">
+                    <p
+                      className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    >
+                      Vivids
+                    </p>
+                  </Link>
                 </div>
               </div>
               {/* Book A Consult Button */}
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <ConsultButton style={"btn btn-ghost relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white"}/>
+                  <ConsultButton style={"btn btn-ghost relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white"} />
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Mobile Menu */}
           <Disclosure.Panel className="md:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {/* Mobile Menu Links */}
               <Disclosure.Button
-                as="a"
-                href="#home"
                 className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                Home
+                <Link href="/">
+                  Home
+                </Link>
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="#service"
-                className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
+                className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                Services
+                <Link href="/extensions">
+                  Extensions
+                </Link>
               </Disclosure.Button>
               <Disclosure.Button
-                as="a"
-                href="#gallery"
-                className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
+                className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                Gallery
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#find-us"
-                className="btn btn-ghost text-white hover:border-white block pl-3 pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                Find Us
+                <Link href="/vivids">
+                  Vivids
+                </Link>
               </Disclosure.Button>
             </div>
           </Disclosure.Panel>

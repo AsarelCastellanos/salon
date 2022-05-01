@@ -2,6 +2,7 @@ import { groq } from "next-sanity";
 import { usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 
+import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
@@ -83,6 +84,7 @@ export default function Home({ data, preview }) {
 
   return (
     <>
+      <NavBar />
       <Hero title={title} description={description} image={image} />
       <Services services={services}/>
       <Gallery extensionDescription={extensionDescription} extensions={extensions} vividDescription={vividDescription} vivids={vivids}/>
