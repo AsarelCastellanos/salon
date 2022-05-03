@@ -30,10 +30,10 @@ const Services = ({ services }) => {
               {services?.map((service) => {
                 return (
                   <tr key={service._id}>
-                    <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
+                    <td className="text-black border-t-2 bg-white border-secondary px-4 py-3">
                       {service.name}
                     </td>
-                    <td className="text-black border-t-2 bg-white border-neutral px-4 py-3">
+                    <td className="text-black border-t-2 bg-white border-secondary px-4 py-3">
                       {service.price}
                     </td>
                   </tr>

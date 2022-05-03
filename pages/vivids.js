@@ -1,6 +1,5 @@
-import React from "react";
 import { groq } from "next-sanity";
-import { urlFor } from "../lib/sanity";
+import { usePreviewSubscription, urlFor } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 import Image from "next/image";
 
@@ -11,7 +10,12 @@ const vividsQuery = groq`*[ _type == "vivids"][0..4]{
   image
 }`;
 
-const vivids = ({ vivids }) => {
+export default function Vivids({ data, preview }) {
+  const { data: vivids } = usePreviewSubscription(vividsQuery, {
+    initialData: data.vivids,
+    enabled: preview,
+  });
+
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -45,16 +49,15 @@ const vivids = ({ vivids }) => {
       </div>
     </section>
   );
-};
-
-export default vivids;
+}
 
 export async function getServerSideProps({ preview = true }) {
   const vivids = await getClient(preview).fetch(vividsQuery);
 
   return {
     props: {
-      vivids,
+      preview,
+      data: { vivids },
     },
   };
 }
