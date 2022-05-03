@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon'][0] {
   title,
   description,
-  image
+  'image':image.asset->url
 }`
 
 export default function Home({ data, preview }) {

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { urlFor } from "../../lib/sanity";
 
 const Hero = ({ title, description, image }) => {
   return (
@@ -27,7 +26,7 @@ const Hero = ({ title, description, image }) => {
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="relative rounded-lg">
               <Image
-                src={urlFor(image).url()}
+                src={image}
                 width="1000"
                 height="700"
                 alt={title}
