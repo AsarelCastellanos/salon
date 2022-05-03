@@ -59,13 +59,6 @@ const NavBar = () => {
                       Gallery
                     </p>
                   </Link>
-                  <Link href="/testimonials" passHref>
-                    <p
-                      className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
-                    >
-                      Testimonials
-                    </p>
-                  </Link>
                 </div>
               </div>
               {/* Book A Consult Button */}
@@ -100,13 +93,6 @@ const NavBar = () => {
               >
                 <Link href="/gallery" passHref>
                   Gallery
-                </Link>
-              </Disclosure.Button>
-              <Disclosure.Button
-                className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
-              >
-                <Link href="/testimonials" passHref>
-                  Testimonials
                 </Link>
               </Disclosure.Button>
             </div>
