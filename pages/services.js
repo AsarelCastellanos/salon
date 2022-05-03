@@ -1,7 +1,25 @@
-import ConsultButton from "./ConsultButton";
 import React from "react";
+import { groq } from "next-sanity";
 
-const Services = ({ services }) => {
+import { usePreviewSubscription } from "../lib/sanity";
+import { getClient } from "../lib/sanity.server";
+import ConsultButton from "./components/ConsultButton";
+
+const serviceQuery = groq`*[_type == "services"] | order(serviceOrder asc)
+{
+ _id,
+ name,
+ price,
+ serviceOrder
+}`;
+
+export default function Services({ data, preview }) {
+
+  const { data: services } = usePreviewSubscription(serviceQuery, {
+    initialData: data.services,
+    enabled: preview,
+  });
+
   return (
     <section id="service" className="bg-primary body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -52,6 +70,15 @@ const Services = ({ services }) => {
       </div>
     </section>
   );
-};
+}
 
-export default Services;
+export async function getServerSideProps({ preview = true }) {
+  const services = await getClient(preview).fetch(serviceQuery);
+
+  return {
+    props: {
+      preview,
+      data: { services },
+    },
+  };
+}

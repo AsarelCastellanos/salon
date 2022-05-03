@@ -3,7 +3,7 @@ import { usePreviewSubscription, urlFor } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 import Image from "next/image";
 
-const extensionsQuery = groq`*[ _type == "extensions"][0..4]{
+const extensionsQuery = groq`*[ _type == "extensions"]{
   _id,
   name,
   bottomHair,
@@ -69,7 +69,7 @@ export async function getServerSideProps({ preview = true }) {
   return {
     props: {
       preview,
-      data: { extensions, preview },
+      data: { extensions },
     },
   };
 }

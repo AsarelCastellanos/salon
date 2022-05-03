@@ -38,25 +38,32 @@ const NavBar = () => {
                 </div>
                 {/* NavBar Links */}
                 <div className="hidden md:ml-6 md:flex md:space-x-2">
-                  <Link href="/">
+                  <Link href="/" passHref>
                     <p
                       className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                     >
                       Home
                     </p>
                   </Link>
-                  <Link href="/extensions">
+                  <Link href="/services" passHref>
                     <p
                       className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                     >
-                      Extensions
+                      Services
                     </p>
                   </Link>
-                  <Link href="/vivids">
+                  <Link href="/gallery" passHref>
                     <p
                       className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
                     >
-                      Vivids
+                      Gallery
+                    </p>
+                  </Link>
+                  <Link href="/testimonials" passHref>
+                    <p
+                      className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-sm font-medium"
+                    >
+                      Testimonials
                     </p>
                   </Link>
                 </div>
@@ -77,22 +84,29 @@ const NavBar = () => {
               <Disclosure.Button
                 className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                <Link href="/">
+                <Link href="/" passHref>
                   Home
                 </Link>
               </Disclosure.Button>
               <Disclosure.Button
                 className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                <Link href="/extensions">
-                  Extensions
+                <Link href="/services" passHref>
+                  Services
                 </Link>
               </Disclosure.Button>
               <Disclosure.Button
                 className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
               >
-                <Link href="/vivids">
-                  Vivids
+                <Link href="/gallery" passHref>
+                  Gallery
+                </Link>
+              </Disclosure.Button>
+              <Disclosure.Button
+                className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-base font-medium sm:pl-5 sm:pr-6"
+              >
+                <Link href="/testimonials" passHref>
+                  Testimonials
                 </Link>
               </Disclosure.Button>
             </div>

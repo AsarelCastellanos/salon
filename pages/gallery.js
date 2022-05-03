@@ -1,15 +1,27 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
-import { urlFor } from "../../lib/sanity";
+import { groq } from "next-sanity";
+import { usePreviewSubscription, urlFor } from "../lib/sanity";
+import { getClient } from "../lib/sanity.server";
 
-const Gallery = ({
+const galleryQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon'][0] {
   extensionDescription,
-  extensions,
+  extensionList[]->{_id, name, topHair, bottomHair},
   vividDescription,
-  vivids,
-}) => {
+  vividList[]->{_id, name, image},
+}`;
+
+export default function Gallery({ data, preview }) {
+
+  const { data: gallery } = usePreviewSubscription(galleryQuery, {
+    initialData: data.gallery,
+    enabled: preview,
+  });
+
+  const { extensionDescription, extensionList, vividDescription, vividList } = gallery;
+
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -25,7 +37,7 @@ const Gallery = ({
           id="extensions"
           className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
         >
-          {extensions?.map((extension) => {
+          {extensionList?.map((extension) => {
             return (
               <div className="m-4 relative" key={extension._id}>
                 <div className="absolute inset-0">
@@ -69,7 +81,7 @@ const Gallery = ({
           id="extensions"
           className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
         >
-          {vivids?.map((vivid) => {
+          {vividList?.map((vivid) => {
             return (
               <div className="m-4" key={vivid._id}>
                 <Image
@@ -84,7 +96,7 @@ const Gallery = ({
           })}
         </div>
         <div className="flex flex-col">
-        <Link href="/vivids" passHref>
+          <Link href="/vivids" passHref>
             <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
               View More vivids
             </button>
@@ -93,6 +105,15 @@ const Gallery = ({
       </div>
     </section>
   );
-};
+}
 
-export default Gallery;
+export async function getServerSideProps({ preview = true }) {
+  const gallery = await getClient(preview).fetch(galleryQuery);
+
+  return {
+    props: {
+      preview,
+      data: { gallery },
+    },
+  };
+}

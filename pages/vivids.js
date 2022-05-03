@@ -1,9 +1,10 @@
+import React from 'react'
 import { groq } from "next-sanity";
 import { usePreviewSubscription, urlFor } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 import Image from "next/image";
 
-const vividsQuery = groq`*[ _type == "vivids"][0..4]{
+const vividsQuery = groq`*[ _type == "vivids"]{
   _id,
   name,
   description,
@@ -11,6 +12,7 @@ const vividsQuery = groq`*[ _type == "vivids"][0..4]{
 }`;
 
 export default function Vivids({ data, preview }) {
+  
   const { data: vivids } = usePreviewSubscription(vividsQuery, {
     initialData: data.vivids,
     enabled: preview,
