@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import { groq } from "next-sanity";
-import { usePreviewSubscription, urlFor } from "../lib/sanity";
+import { urlFor } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
-import Image from 'next/image';
+import Image from "next/image";
 
 const vividsQuery = groq`*[ _type == "vivids"][0..4]{
   _id,
@@ -11,22 +11,17 @@ const vividsQuery = groq`*[ _type == "vivids"][0..4]{
   image
 }`;
 
-const vivids = ({ data, preview }) => {
-
-  const { data: vivids } = usePreviewSubscription(vividsQuery, {
-    initialData: data.vivids,
-    enabled: preview,
-  });
-
+const vivids = ({ vivids }) => {
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mt-10 mb-10">
           <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
-            Below are all vivids that have been done in the past. Hopefully this should give you an idea of the type of work you can expect.
+            Vivids
           </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-black">
-            These are all the vivids we have done in the past.
+            Below are all vivids that have been done in the past. Hopefully this
+            should give you an idea of the type of work you can expect.
           </p>
         </div>
         <div
@@ -49,18 +44,17 @@ const vivids = ({ data, preview }) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default vivids
+export default vivids;
 
 export async function getServerSideProps({ preview = true }) {
   const vivids = await getClient(preview).fetch(vividsQuery);
 
   return {
     props: {
-      preview,
-      data: { vivids },
+      vivids,
     },
   };
 }

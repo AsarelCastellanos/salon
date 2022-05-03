@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { groq } from "next-sanity";
-import { usePreviewSubscription, urlFor } from "../lib/sanity";
+import { urlFor } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 import Image from 'next/image';
 
@@ -12,13 +12,7 @@ const extensionsQuery = groq`*[ _type == "extensions"][0..4]{
   topHair 
 }`;
 
-const extensions = ({ data, preview }) => {
-
-  const { data: extensions } = usePreviewSubscription(extensionsQuery, {
-    initialData: data.extensions,
-    enabled: preview,
-  });
-
+const extensions = ({ extensions }) => {
   return (
     <section id="gallery" className="bg-white body-font">
     <div className="container px-5 py-24 mx-auto">
@@ -71,8 +65,7 @@ export async function getServerSideProps({ preview = true }) {
 
   return {
     props: {
-      preview,
-      data: { extensions },
+      extensions
     },
   };
 }
