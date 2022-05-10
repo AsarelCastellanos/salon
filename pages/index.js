@@ -3,9 +3,10 @@ import { usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
 
 import Hero from "./components/Hero";
-import Testimonials from "./components/Testimonials";
+import LogoCloud from "./components/LogoCloud";
 import CTAServices from "./components/CTAServices";
 import CTAGallery from "./components/CTAGallery";
+import Testimonials from "./components/Testimonials";
 
 
 const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon'][0] {
@@ -32,6 +33,7 @@ export default function Home({ data, preview }) {
   return (
     <>
       <Hero title={title} description={description} image={image} />
+      <LogoCloud />
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />

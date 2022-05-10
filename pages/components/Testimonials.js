@@ -5,9 +5,9 @@ import { urlFor } from "../../lib/sanity";
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <section id="testimonials" className="bg-primary body-font">
+    <section id="testimonials" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-16 text-center">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-black mb-16 text-center">
           Testimonials
         </h1>
         <div className="flex flex-wrap -m-4">
@@ -18,7 +18,7 @@ const Testimonials = ({ testimonials }) => {
                 className="lg:w-1/3 lg:mb-0 mb-6 p-4 max-w-xl mx-auto"
               >
                 <div className="h-full text-center">
-                  <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-white bg-gray-100">
+                  <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-primary">
                     <Image
                       className="rounded-full"
                       src={urlFor(testimonial.image).url()}
@@ -28,14 +28,14 @@ const Testimonials = ({ testimonials }) => {
                       priority="true"
                     />
                   </div>
-                  <p className="text-lg leading-6 text-white">
+                  <p className="text-lg leading-6 text-black">
                     {testimonial.description}
                   </p>
-                  <span className="inline-block h-1 w-10 rounded bg-white mt-2 mb-2"></span>
-                  <h2 className="text-white font-medium tracking-wider text-sm">
+                  <span className="inline-block h-1 w-10 rounded bg-primary mt-2 mb-2"></span>
+                  <h2 className="text-black font-medium tracking-wider text-lg">
                     {testimonial.name}
                   </h2>
-                  <p className="text-white">{testimonial.date}</p>
+                  <p className="text-black font-medium tracking-wider text-md">{testimonial.date}</p>
                 </div>
               </div>
             );
@@ -43,6 +43,7 @@ const Testimonials = ({ testimonials }) => {
         </div>
       </div>
     </section>
+    
   );
 };
 
