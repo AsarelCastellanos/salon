@@ -51,17 +51,17 @@ const NavBar = () => {
                 {/* NavBar Links */}
                 <div className="hidden md:ml-6 md:flex md:space-x-2">
                   <Link href="/" passHref>
-                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-md font-medium">
+                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-lg capitalize font-medium">
                       Home
                     </p>
                   </Link>
                   <Link href="/services" passHref>
-                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-md font-medium">
+                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-lg capitalize font-medium">
                       Services
                     </p>
                   </Link>
                   <Link href="/gallery" passHref>
-                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-md font-medium">
+                    <p className="btn btn-ghost text-white inline-flex items-center px-2 mt-2 text-lg capitalize font-medium">
                       Gallery
                     </p>
                   </Link>
@@ -72,7 +72,7 @@ const NavBar = () => {
                 <div className="flex-shrink-0">
                   <ConsultButton
                     style={
-                      "btn btn-ghost relative inline-flex items-center px-4 py-2 border border-transparent text-md font-medium rounded-md text-white"
+                      "btn btn-ghost relative inline-flex items-center text-md text-lg capitalize font-medium rounded-md text-white"
                     }
                   />
                 </div>
@@ -84,17 +84,17 @@ const NavBar = () => {
           <Disclosure.Panel className="md:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {/* Mobile Menu Links */}
-              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-md font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/" passHref>
                   Home
                 </Link>
               </Disclosure.Button>
-              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-md font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/services" passHref>
                   Services
                 </Link>
               </Disclosure.Button>
-              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-md font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/gallery" passHref>
                   Gallery
                 </Link>

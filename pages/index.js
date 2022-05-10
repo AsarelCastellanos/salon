@@ -7,12 +7,14 @@ import LogoCloud from "./components/LogoCloud";
 import CTAServices from "./components/CTAServices";
 import CTAGallery from "./components/CTAGallery";
 import Testimonials from "./components/Testimonials";
+import FindUs from "./components/FindUs";
 
 
 const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon'][0] {
   title,
   description,
-  'image':image.asset->url
+  'image':image.asset->url,
+  'businessDays':businessHourList[]->{_id, day, hour}
 }`;
 
 const testimonialQuery = groq`*[_type == "testimonials"]`;
@@ -28,7 +30,7 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { title, description, image } = website;
+  const { title, description, image, businessDays } = website;
 
   return (
     <>
@@ -37,6 +39,7 @@ export default function Home({ data, preview }) {
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />
+      {/* <FindUs /> */}
     </>
   );
 }

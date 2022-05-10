@@ -3,27 +3,24 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-primary text-white">
-      <div>
-        <Image
-          src="/logos/vss_logo.png"
-          width="50"
-          height="65"
-          layout="fixed"
-          alt="Vicious Streak Salon"
-        />
-        <p className="font-bold">
-          Vicious Streak Salon <br />
-          Providing reliable hair since 1992
-        </p>
-        <p>Copyright © 2022 - All rights reserved</p>
-      </div>
-      <div>
-        <div className="grid grid-flow-col gap-4">
+    <footer className="bg-primary body-font">
+      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+        <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+          <Image
+            src="/logos/vss_logo.png"
+            width="50"
+            height="65"
+            layout="fixed"
+            alt="Vicious Streak Salon"
+          />
+          <span className="ml-3 text-xl">Vicious Streak Salon</span>
+        </a>
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
             href="https://www.facebook.com/vidaliahair"
             target="_blank"
             rel="noreferrer"
+            className="text-white"
           >
             <svg
               fill="currentColor"
@@ -40,6 +37,7 @@ const Footer = () => {
             href="https://www.instagram.com/viciousstreaksalon"
             target="_blank"
             rel="noreferrer"
+            className="ml-3 text-white"
           >
             <svg
               fill="none"
@@ -58,6 +56,7 @@ const Footer = () => {
             href="https://www.yelp.com/biz/vicious-streak-salon-santa-ana"
             target="_blank"
             rel="noreferrer"
+            className="ml-3 text-white"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +91,7 @@ const Footer = () => {
               </g>
             </svg>
           </a>
-        </div>
+        </span>
       </div>
     </footer>
   );
