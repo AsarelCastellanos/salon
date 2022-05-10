@@ -22,7 +22,7 @@ const Testimonials = ({ testimonials }) => {
                     <Image
                       className="rounded-full"
                       src={urlFor(testimonial.image).url()}
-                      alt="Charles"
+                      alt={testimonial.name}
                       width="80"
                       height="80"
                       priority="true"
