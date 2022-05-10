@@ -25,7 +25,7 @@ const Testimonials = ({ testimonials }) => {
                       alt="Charles"
                       width="80"
                       height="80"
-                      loading="lazy"
+                      priority="true"
                     />
                   </div>
                   <p className="text-lg leading-6 text-white">
