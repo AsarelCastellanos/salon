@@ -84,17 +84,17 @@ const NavBar = () => {
           <Disclosure.Panel className="md:hidden">
             <div className="pt-2 pb-3 space-y-1">
               {/* Mobile Menu Links */}
-              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/" passHref>
                   Home
                 </Link>
               </Disclosure.Button>
-              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/services" passHref>
                   Services
                 </Link>
               </Disclosure.Button>
-              <Disclosure.Button className="w-full btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
+              <Disclosure.Button className="btn btn-ghost text-white hover:border-white block pr-4 py-2 text-lg capitalize font-medium sm:pl-5 sm:pr-6">
                 <Link href="/gallery" passHref>
                   Gallery
                 </Link>
