@@ -14,22 +14,22 @@ const galleryQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon
 }`;
 
 export default function Gallery({ data, preview }) {
-
   const { data: gallery } = usePreviewSubscription(galleryQuery, {
     initialData: data.gallery,
     enabled: preview,
   });
 
-  const { extensionDescription, extensionList, vividDescription, vividList } = gallery;
+  const { extensionDescription, extensionList, vividDescription, vividList } =
+    gallery;
 
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-10">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
+          <h1 className="text-2xl font-extrabold text-black sm:text-3xl">
             Extensions
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-black">
+          <p className="lg:w-2/3 mx-auto text-lg leading-6 text-black mt-4">
             {extensionDescription}
           </p>
         </div>
@@ -64,16 +64,16 @@ export default function Gallery({ data, preview }) {
         </div>
         <div className="flex flex-col">
           <Link href="/extensions" passHref>
-            <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+            <button className="btn btn-primary px-4 py-2 text-lg capitalize font-medium rounded-md text-white">
               View More Extensions
             </button>
           </Link>
         </div>
         <div className="flex flex-col text-center w-full mt-10 mb-10">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-black">
+          <h1 className="text-2xl font-extrabold text-black sm:text-3xl">
             Vivids
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-black">
+          <p className="lg:w-2/3 mx-auto text-lg leading-6 text-black mt-4">
             {vividDescription}
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function Gallery({ data, preview }) {
         </div>
         <div className="flex flex-col">
           <Link href="/vivids" passHref>
-            <button className="btn btn-primary relative px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white">
+            <button className="btn btn-primary px-4 py-2 text-lg capitalize font-medium rounded-md text-white">
               View More vivids
             </button>
           </Link>

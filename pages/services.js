@@ -3,7 +3,6 @@ import { groq } from "next-sanity";
 
 import { usePreviewSubscription } from "../lib/sanity";
 import { getClient } from "../lib/sanity.server";
-import ConsultButton from "./components/ConsultButton";
 
 const serviceQuery = groq`*[_type == "services"] | order(serviceOrder asc)
 {
@@ -20,54 +19,52 @@ export default function Services({ data, preview }) {
   });
 
   return (
-    <section id="service" className="bg-white body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-20">
-          <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-black">
-            Our Services
+    <div className="bg-white">
+      {/* Header */}
+      <div className="pb-20">
+        <div className="max-w-7xl text-center mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight text-black md:text-5xl lg:text-6xl">
+            Services
           </h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-black text-base">
+          <p className="mt-6 max-w-3xl mx-auto text-xl text-black text-center">
             Below you&apos;ll find our starting prices. They will vary depending
-            on hair length, volume and texture.
+            on hair length, volume and texture. When you want to book an
+            appointment just click the &quot;Book A Consult&quot; button on the
+            top right.
           </p>
         </div>
-        <div className="lg:w-2/3 w-full mx-auto overflow-auto">
-          <table className="table-auto w-full text-left whitespace-no-wrap">
-            <thead>
-              <tr>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-primary rounded-tl rounded-bl">
-                  Service
-                </th>
-                <th className="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-primary rounded-tr rounded-br">
-                  Pricing
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {services?.map((service) => {
-                return (
-                  <tr key={service._id}>
-                    <td className="text-black border-t-2 bg-white border-primary px-4 py-3">
-                      {service.name}
-                    </td>
-                    <td className="text-black border-t-2 bg-white border-primary px-4 py-3">
-                      {service.price}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-        <div className="flex pl-4 mt-4 lg:w-2/3 w-full mx-auto">
-          <ConsultButton
-            style={
-              "flex ml-auto text-white border-0 py-2 px-6 btn btn-primary rounded"
-            }
-          />
-        </div>
       </div>
-    </section>
+      {/* Overlapping cards */}
+      <section
+        className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="contact-heading"
+      >
+        <div className="grid grid-cols-1 gap-y-4 lg:grid-cols-3 lg:gap-y-8 lg:gap-x-8 md:grid-cols-2 md:gap-y-8 md:gap-x-4">
+          {services?.map((service) => (
+            <div
+              key={service._id}
+              className="flex flex-col bg-primary rounded-2xl"
+            >
+              <div className="flex-1 relative pt-4 px-6 pb-2">
+                <div className="flex flex-row">
+                  <h3 className="flex-1 text-xl font-medium text-white">
+                    {service.name}
+                  </h3>
+                  <p className="flex-1 text-xl font-medium text-right text-white">
+                    {service.price}
+                  </p>
+                </div>
+              </div>
+              <div className="px-5 py-6 bg-white rounded-bl-2xl rounded-br-2xl border-l-4 border-b-4 border-r-4 border-primary">
+                <p className="text-lg font-medium text-black">
+                  Description of the service
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 

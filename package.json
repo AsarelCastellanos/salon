@@ -9,10 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.5.0",
+    "@headlessui/react": "^1.6.1",
     "@heroicons/react": "^1.0.6",
     "@portabletext/react": "^1.0.6",
     "@sanity/image-url": "^1.0.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
     "@typeform/embed-react": "^1.14.0",
     "daisyui": "^2.13.6",
     "next": "12.1.4",

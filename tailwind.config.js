@@ -10,6 +10,7 @@ module.exports = {
   plugins: [
     require("daisyui"),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
   ],
   // Adding Custom DaisyUI Configurations
   daisyui: {
