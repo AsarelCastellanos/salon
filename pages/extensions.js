@@ -7,7 +7,8 @@ const extensionsQuery = groq`*[ _type == "extensions"]{
   _id,
   name,
   bottomHair,
-  topHair 
+  topHair,
+  description 
 }`;
 
 export default function Extensions({ data, preview }) {
@@ -19,11 +20,11 @@ export default function Extensions({ data, preview }) {
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-10">
-          <h1 className="text-2xl font-extrabold text-black sm:text-3xl mb-4">
+        <div className="flex flex-col w-full mb-10 text-center">
+          <h1 className="mb-4 text-2xl font-extrabold text-black sm:text-3xl">
             Extensions
           </h1>
-          <p className="lg:w-2/3 mx-auto text-lg leading-6 text-black mt-4">
+          <p className="mx-auto mt-4 text-lg leading-6 text-black lg:w-2/3">
             Below are all extensions that have been done in the past. You can
             hover over the images (click on the images on mobile) to view the
             extension work done under the hair.
@@ -31,11 +32,11 @@ export default function Extensions({ data, preview }) {
         </div>
         <div
           id="extensions"
-          className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4 justify-items-center"
+          className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 justify-items-center"
         >
           {extensions?.map((extension) => {
             return (
-              <div className="m-4 relative border-4 border-primary bg-primary" key={extension._id}>
+              <div className="relative m-4 border-4 border-primary bg-primary" key={extension._id}>
                 <div className="absolute inset-0">
                   <Image
                     src={urlFor(extension.topHair).url()}
@@ -45,7 +46,7 @@ export default function Extensions({ data, preview }) {
                     height={415.99}
                   />
                 </div>
-                <div className="relative opacity-0 hover:opacity-100 z-10">
+                <div className="relative z-10 opacity-0 hover:opacity-100">
                   <Image
                     src={urlFor(extension.bottomHair).url()}
                     alt={extension.name}
@@ -54,11 +55,11 @@ export default function Extensions({ data, preview }) {
                     height={415.99}
                   />
                 </div>
-                <h2 className="text-white text-lg leading-6 bg-primary p-4 text-center">
+                <h2 className="p-4 text-lg leading-6 text-center text-white bg-primary">
                   {extension.name}
                 </h2>
-                <p className="text-black text-lg leading-6 bg-white p-2 text-center">
-                  {extension.name}
+                <p className="p-2 text-lg leading-6 text-center text-black bg-white">
+                  {extension.description}
                 </p>
               </div>
             );
