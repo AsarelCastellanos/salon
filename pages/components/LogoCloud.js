@@ -18,7 +18,7 @@ const LogoCloud = ({ logos }) => {
                 <Image
                     src={urlFor(logo.asset).url()}
                     alt={logo._key}
-                    loading="eager"
+                    priority="true"
                     width={5000}
                     height={850}
                   />
