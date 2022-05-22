@@ -41,7 +41,7 @@ export default function Extensions({ data, preview }) {
                   <Image
                     src={urlFor(extension.topHair).url()}
                     alt={extension.name}
-                    loading="lazy"
+                    priority="true"
                     width={318.69}
                     height={415.99}
                   />
@@ -50,7 +50,7 @@ export default function Extensions({ data, preview }) {
                   <Image
                     src={urlFor(extension.bottomHair).url()}
                     alt={extension.name}
-                    loading="lazy"
+                    priority="true"
                     width={318.69}
                     height={415.99}
                   />

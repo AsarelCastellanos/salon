@@ -39,7 +39,7 @@ export default function Vivids({ data, preview }) {
                 <Image
                   src={urlFor(vivid.image).url()}
                   alt={vivid.name}
-                  loading="lazy"
+                  priority="true"
                   width={318.69}
                   height={415.99}
                 />

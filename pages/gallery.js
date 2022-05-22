@@ -25,35 +25,35 @@ export default function Gallery({ data, preview }) {
   return (
     <section id="gallery" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-10">
+        <div className="flex flex-col w-full mb-10 text-center">
           <h1 className="text-2xl font-extrabold text-black sm:text-3xl">
             Extensions
           </h1>
-          <p className="lg:w-2/3 mx-auto text-lg leading-6 text-black mt-4">
+          <p className="mx-auto mt-4 text-lg leading-6 text-black lg:w-2/3">
             {extensionDescription}
           </p>
         </div>
         <div
           id="extensions"
-          className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
+          className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-items-center"
         >
           {extensionList?.map((extension) => {
             return (
-              <div className="m-4 relative" key={extension._id}>
+              <div className="relative m-4" key={extension._id}>
                 <div className="absolute inset-0">
                   <Image
                     src={urlFor(extension.topHair).url()}
                     alt={extension.name}
-                    loading="lazy"
+                    priority="true"
                     width={318.69}
                     height={415.99}
                   />
                 </div>
-                <div className="relative opacity-0 hover:opacity-100 z-10">
+                <div className="relative z-10 opacity-0 hover:opacity-100">
                   <Image
                     src={urlFor(extension.bottomHair).url()}
                     alt={extension.name}
-                    loading="lazy"
+                    priority="true"
                     width={318.69}
                     height={415.99}
                   />
@@ -64,22 +64,22 @@ export default function Gallery({ data, preview }) {
         </div>
         <div className="flex flex-col">
           <Link href="/extensions" passHref>
-            <button className="btn btn-primary px-4 py-2 text-lg capitalize font-medium rounded-md text-white">
+            <button className="px-4 py-2 text-lg font-medium text-white capitalize rounded-md btn btn-primary">
               View More Extensions
             </button>
           </Link>
         </div>
-        <div className="flex flex-col text-center w-full mt-10 mb-10">
+        <div className="flex flex-col w-full mt-10 mb-10 text-center">
           <h1 className="text-2xl font-extrabold text-black sm:text-3xl">
             Vivids
           </h1>
-          <p className="lg:w-2/3 mx-auto text-lg leading-6 text-black mt-4">
+          <p className="mx-auto mt-4 text-lg leading-6 text-black lg:w-2/3">
             {vividDescription}
           </p>
         </div>
         <div
           id="extensions"
-          className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 justify-items-center"
+          className="grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 justify-items-center"
         >
           {vividList?.map((vivid) => {
             return (
@@ -87,7 +87,7 @@ export default function Gallery({ data, preview }) {
                 <Image
                   src={urlFor(vivid.image).url()}
                   alt={vivid.name}
-                  loading="lazy"
+                  priority="true"
                   width={318.69}
                   height={415.99}
                 />
@@ -97,7 +97,7 @@ export default function Gallery({ data, preview }) {
         </div>
         <div className="flex flex-col">
           <Link href="/vivids" passHref>
-            <button className="btn btn-primary px-4 py-2 text-lg capitalize font-medium rounded-md text-white">
+            <button className="px-4 py-2 text-lg font-medium text-white capitalize rounded-md btn btn-primary">
               View More vivids
             </button>
           </Link>

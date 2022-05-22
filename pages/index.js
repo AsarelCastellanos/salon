@@ -40,7 +40,7 @@ export default function Home({ data, preview }) {
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />
-      {/* <FindUs /> */}
+      <FindUs businessDays={businessDays}/>
     </>
   );
 }

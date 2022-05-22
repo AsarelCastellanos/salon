@@ -1,6 +1,6 @@
 import React from "react";
 
-const FindUs = () => {
+const FindUs = ({ businessDays }) => {
   return (
     <p>Find Us</p>
   );
