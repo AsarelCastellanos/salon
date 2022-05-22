@@ -15,7 +15,9 @@ const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon
   description,
   'image':image.asset->url,
   'businessDays':businessHourList[]->{_id, day, hour},
-  logos
+  logos,
+  firstAddress,
+  secondAddress
 }`;
 
 const testimonialQuery = groq`*[_type == "testimonials"]`;
@@ -31,7 +33,8 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { title, description, image, businessDays, logos } = website;
+  console.log(website);
+  const { title, description, image, businessDays, logos, firstAddress, secondAddress } = website;
 
   return (
     <>
@@ -40,7 +43,8 @@ export default function Home({ data, preview }) {
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />
-      <FindUs businessDays={businessDays}/>
+      <FindUs businessDays={businessDays} firstAddress={firstAddress} secondAddress={secondAddress}/>
+
     </>
   );
 }
