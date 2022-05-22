@@ -14,7 +14,8 @@ const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon
   title,
   description,
   'image':image.asset->url,
-  'businessDays':businessHourList[]->{_id, day, hour}
+  'businessDays':businessHourList[]->{_id, day, hour},
+  logos
 }`;
 
 const testimonialQuery = groq`*[_type == "testimonials"]`;
@@ -30,12 +31,12 @@ export default function Home({ data, preview }) {
     enabled: preview,
   });
 
-  const { title, description, image, businessDays } = website;
+  const { title, description, image, businessDays, logos } = website;
 
   return (
     <>
       <Hero title={title} description={description} image={image} />
-      <LogoCloud />
+      <LogoCloud logos={logos} />
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />
