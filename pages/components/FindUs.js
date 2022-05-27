@@ -17,13 +17,13 @@ const FindUs = ({ businessDays, firstAddress, secondAddress }) => {
             </h2>
             <div className="mt-9">
               <div className="flex justify-center">
-                <div className="flex-shrink-0">
+                {/* <div className="flex-shrink-0">
                   <LocationMarkerIcon
                     className="w-6 h-6 text-white"
                     aria-hidden="true"
                   />
-                </div>
-                <div className="text-base text-white">
+                </div> */}
+                <div className="text-base text-white ml-2">
                   <a
                     className="underline"
                     href="https://goo.gl/maps/p1dkFoGW6z3n7ma97"
@@ -31,7 +31,7 @@ const FindUs = ({ businessDays, firstAddress, secondAddress }) => {
                     rel="noreferrer"
                   >
                     <p>{firstAddress}</p>
-                    <p className="mt-1">{secondAddress}</p>
+                    <p>{secondAddress}</p>
                   </a>
                 </div>
               </div>
@@ -43,20 +43,20 @@ const FindUs = ({ businessDays, firstAddress, secondAddress }) => {
             </h2>
             <div className="mt-9">
               <div className="flex justify-center">
-                <div className="ml-8 text-base text-white ">
+                <div className="ml-14 text-base text-white">
                   {businessDays?.map((businessDay) => {
                     return (
-                      <div className="flex" key={businessDay._id}>
+                      <div className="flex mt-2" key={businessDay._id}>
                         <CalendarIcon
                           className="w-6 h-6 text-white"
                           aria-hidden="true"
                         />
-                        <p className="flex-1 mt-1 ml-4">{businessDay.day}</p>
+                        <p className="flex-1 ml-4">{businessDay.day}</p>
                         <ClockIcon
                           className="w-6 h-6 text-white"
                           aria-hidden="true"
                         />
-                        <p className="flex-1 mt-1 ml-4">{businessDay.hour}</p>
+                        <p className="flex-1 ml-4">{businessDay.hour}</p>
                       </div>
                     );
                   })}
