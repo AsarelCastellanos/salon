@@ -9,7 +9,7 @@ const FindUs = ({ businessDays, firstAddress, secondAddress }) => {
           <h1 className="text-2xl font-extrabold text-white sm:text-3xl mb-4">
             Our Address
           </h1>
-          <a className="text-lg leading-6 text-white underline" href="">
+          <a className="text-lg leading-6 text-white underline" href="https://goo.gl/maps/YJMuG1A5zzhbTkzz9" target="_blank">
             <span className="block">
               {firstAddress}
             </span>
