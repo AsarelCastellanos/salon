@@ -18,7 +18,7 @@ export default function Extensions({ data, preview }) {
   });
 
   return (
-    <section id="gallery" className="bg-white body-font">
+    <section id="gallery" className="bg-neutral body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col w-full mb-10 text-center">
           <h1 className="mb-4 text-2xl font-extrabold text-black sm:text-3xl">

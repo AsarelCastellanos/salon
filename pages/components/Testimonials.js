@@ -5,9 +5,9 @@ import { urlFor } from "../../lib/sanity";
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <section id="testimonials" className="bg-white body-font">
+    <section id="testimonials" className="bg-neutral body-font">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-extrabold text-black mb-16 text-center">
+        <h1 className="mb-16 text-3xl font-extrabold text-center text-black sm:text-4xl">
           Testimonials
         </h1>
         <div className="flex flex-wrap -m-4">
@@ -15,10 +15,10 @@ const Testimonials = ({ testimonials }) => {
             return (
               <div
                 key={testimonial._id}
-                className="lg:w-1/3 lg:mb-0 mb-6 p-4 max-w-xl mx-auto"
+                className="max-w-xl p-4 mx-auto mb-6 lg:w-1/3 lg:mb-0"
               >
                 <div className="h-full text-center">
-                  <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-primary">
+                  <div className="inline-block object-cover object-center w-20 h-20 mb-8 border-2 rounded-full border-primary bg-primary">
                     <Image
                       className="rounded-full"
                       src={urlFor(testimonial.image).url()}
@@ -31,11 +31,11 @@ const Testimonials = ({ testimonials }) => {
                   <p className="text-lg leading-6 text-black">
                     {testimonial.description}
                   </p>
-                  <span className="inline-block h-1 w-10 rounded bg-primary mt-2 mb-2"></span>
-                  <h2 className="text-black font-medium tracking-wider text-lg">
+                  <span className="inline-block w-10 h-1 mt-2 mb-2 rounded bg-primary"></span>
+                  <h2 className="text-lg font-medium tracking-wider text-black">
                     {testimonial.name}
                   </h2>
-                  <p className="text-black font-medium tracking-wider text-md">{testimonial.date}</p>
+                  <p className="font-medium tracking-wider text-black text-md">{testimonial.date}</p>
                 </div>
               </div>
             );

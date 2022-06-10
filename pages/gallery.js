@@ -23,7 +23,7 @@ export default function Gallery({ data, preview }) {
     gallery;
 
   return (
-    <section id="gallery" className="bg-white body-font">
+    <section id="gallery" className="bg-neutral body-font">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col w-full mb-10 text-center">
           <h1 className="text-2xl font-extrabold text-black sm:text-3xl">

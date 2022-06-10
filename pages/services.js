@@ -20,7 +20,7 @@ export default function Services({ data, preview }) {
   });
 
   return (
-    <div className="bg-white">
+    <div className="bg-neutral">
       {/* Header */}
       <div className="pb-20">
         <div className="px-4 py-24 mx-auto text-center max-w-7xl sm:py-32 sm:px-6 lg:px-8">
