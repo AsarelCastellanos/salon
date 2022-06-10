@@ -12,7 +12,7 @@ A commercial website for Vicious Streak Salon built on Next.js.
 
 ## Desktop and Mobile Screenshots
 
-[Screenshots]()
+[Screenshots](https://github.com/AsarelCastellanos/salon/blob/main/SCREENSHOTS.md)
 
 ## Tech Stack
 
