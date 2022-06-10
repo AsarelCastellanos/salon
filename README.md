@@ -118,15 +118,15 @@ A commercial website for Vicious Streak Salon built on Next.js.
 
 ### Home Page
 <div align="center">
-    <img src="externalAssets/DesktopHomePage.PNG" alt="Home Page">
+    <img src="externalAssets/desktopHomePage.PNG" alt="Home Page">
 </div>
 
 <div align="center">
-    <img src="externalAssets/DesktopHomePage_2.PNG" alt="Home Page">
+    <img src="externalAssets/desktopHomePage_2.PNG" alt="Home Page">
 </div>
 
 <div align="center">
-    <img src="externalAssets/DesktopHomePage_3.PNG" alt="Home Page">
+    <img src="externalAssets/desktopHomePage_3.PNG" alt="Home Page">
 </div>
 
 ### Services
