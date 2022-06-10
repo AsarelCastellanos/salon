@@ -46,7 +46,7 @@ export default function Services({ data, preview }) {
               key={service._id}
               className="flex flex-col bg-primary rounded-2xl"
             >
-              <div className="flex-1 px-6 pt-4 pb-4 max-h-20">
+              <div className="flex-1 px-6 pt-4 pb-4">
                 <div className="flex flex-row">
                   <h3 className="flex-1 text-xl font-medium text-white">
                     {service.name}
