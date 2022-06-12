@@ -1,4 +1,6 @@
-![ViciousStreakSalon](https://viciousstreaksalon.vercel.app/_next/image?url=%2Flogos%2Fvss_logo.png&w=64&q=75)
+<div align="center">
+  <img src="https://viciousstreaksalon.vercel.app/_next/image?url=%2Flogos%2Fvss_logo.png&w=64&q=75">
+</div>
 
 # Vicious Streak Salon
 
