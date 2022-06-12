@@ -10,7 +10,9 @@ const CTAServices = () => {
           <span className="block">What do you offer?</span>
         </h2>
         <p className="mt-4 text-lg leading-6 text-black">
-          Great question! I offer a range of servies from root color, hair cuts, balayage, extensions and more. Below you will be directed to a page where you will see all the base prices.
+          Great question! I offer a range of servies from root color, hair cuts,
+          balayage, extensions and more. Below you will be directed to a page
+          where you will see all the base prices.
         </p>
         <Link href="/services" passHref>
           <button className="w-full mt-6 text-lg font-medium text-white capitalize rounded-md btn btn-primary sm:w-auto">

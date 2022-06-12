@@ -35,7 +35,9 @@ const Testimonials = ({ testimonials }) => {
                   <h2 className="text-lg font-medium tracking-wider text-black">
                     {testimonial.name}
                   </h2>
-                  <p className="font-medium tracking-wider text-black text-md">{testimonial.date}</p>
+                  <p className="font-medium tracking-wider text-black text-md">
+                    {testimonial.date}
+                  </p>
                 </div>
               </div>
             );
@@ -43,7 +45,6 @@ const Testimonials = ({ testimonials }) => {
         </div>
       </div>
     </section>
-    
   );
 };
 

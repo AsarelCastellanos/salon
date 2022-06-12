@@ -9,7 +9,6 @@ import CTAGallery from "./components/CTAGallery";
 import Testimonials from "./components/Testimonials";
 import FindUs from "./components/FindUs";
 
-
 const websiteQuery = groq`*[_type == "website" && title == 'Vicious Streak Salon'][0] {
   title,
   description,
@@ -34,7 +33,15 @@ export default function Home({ data, preview }) {
   });
 
   console.log(website);
-  const { title, description, image, businessDays, logos, firstAddress, secondAddress } = website;
+  const {
+    title,
+    description,
+    image,
+    businessDays,
+    logos,
+    firstAddress,
+    secondAddress,
+  } = website;
 
   return (
     <>
@@ -43,8 +50,11 @@ export default function Home({ data, preview }) {
       <CTAGallery />
       <CTAServices />
       <Testimonials testimonials={testimonials} />
-      <FindUs businessDays={businessDays} firstAddress={firstAddress} secondAddress={secondAddress}/>
-
+      <FindUs
+        businessDays={businessDays}
+        firstAddress={firstAddress}
+        secondAddress={secondAddress}
+      />
     </>
   );
 }

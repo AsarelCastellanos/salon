@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { urlFor } from "../../lib/sanity";
 
-
 const LogoCloud = ({ logos }) => {
   return (
     <div className="bg-primary">
@@ -14,14 +13,17 @@ const LogoCloud = ({ logos }) => {
         <div className="grid grid-cols-2 gap-8 mt-8 md:grid-cols-4 lg:grid-cols-4">
           {logos?.map((logo) => {
             return (
-              <div key={logo._key} className="flex justify-center col-span-1 md:col-span-2 lg:col-span-1">
+              <div
+                key={logo._key}
+                className="flex justify-center col-span-1 md:col-span-2 lg:col-span-1"
+              >
                 <Image
-                    src={urlFor(logo.asset).url()}
-                    alt={logo._key}
-                    priority="true"
-                    width={5000}
-                    height={850}
-                  />
+                  src={urlFor(logo.asset).url()}
+                  alt={logo._key}
+                  priority="true"
+                  width={5000}
+                  height={850}
+                />
               </div>
             );
           })}

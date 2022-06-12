@@ -15,15 +15,15 @@ export default function Testimonials({ data, preview }) {
   return (
     <section id="testimonials" className="bg-white body-font">
       <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-3xl font-medium title-font text-black mb-20 text-center">
+        <h1 className="mb-20 text-3xl font-medium text-center text-black title-font">
           Testimonials
         </h1>
         <div className="flex flex-wrap -m-4">
           {testimonials?.map((testimonial) => {
             return (
-              <div key={testimonial._id} className="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div key={testimonial._id} className="p-4 mb-6 lg:w-1/3 lg:mb-0">
                 <div className="h-full text-center">
-                  <div className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-primary bg-primary">
+                  <div className="inline-block object-cover object-center w-20 h-20 mb-8 border-2 rounded-full border-primary bg-primary">
                     <Image
                       className="rounded-full"
                       src={urlFor(testimonial.image).url()}
@@ -36,8 +36,8 @@ export default function Testimonials({ data, preview }) {
                   <p className="leading-relaxed text-black">
                     {testimonial.description}
                   </p>
-                  <span className="inline-block h-1 w-10 rounded bg-primary mt-2 mb-2"></span>
-                  <h2 className="text-black font-medium title-font tracking-wider text-sm">
+                  <span className="inline-block w-10 h-1 mt-2 mb-2 rounded bg-primary"></span>
+                  <h2 className="text-sm font-medium tracking-wider text-black title-font">
                     {testimonial.name}
                   </h2>
                   <p className="text-black">{testimonial.date}</p>

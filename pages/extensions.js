@@ -36,7 +36,10 @@ export default function Extensions({ data, preview }) {
         >
           {extensions?.map((extension) => {
             return (
-              <div className="relative m-4 border-4 border-primary bg-primary" key={extension._id}>
+              <div
+                className="relative m-4 border-4 border-primary bg-primary"
+                key={extension._id}
+              >
                 <div className="absolute inset-0">
                   <Image
                     src={urlFor(extension.topHair).url()}

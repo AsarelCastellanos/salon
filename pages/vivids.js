@@ -35,7 +35,10 @@ export default function Vivids({ data, preview }) {
         >
           {vivids?.map((vivid) => {
             return (
-              <div className="mx-5 border-4 border-primary bg-primary" key={vivid._id}>
+              <div
+                className="mx-5 border-4 border-primary bg-primary"
+                key={vivid._id}
+              >
                 <Image
                   src={urlFor(vivid.image).url()}
                   alt={vivid.name}
