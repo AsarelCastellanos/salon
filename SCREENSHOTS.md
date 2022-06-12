@@ -1,6 +1,7 @@
-## Mobile Preview
+<div align="center">
+    <h1>Home Page - Mobile</h1>
+</div>
 
-### Home Page
 <div align="center">
     <img src="externalAssets/mobileHomePage.PNG" alt="Home Page">
 </div>
@@ -21,7 +22,10 @@
     <img src="externalAssets/mobileHomePage_5.PNG" alt="Home Page">
 </div>
 
-### Services
+<div align="center">
+    <h1>Services - Mobile</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/mobileServices.PNG" alt="Services">
 </div>
@@ -34,7 +38,10 @@
     <img src="externalAssets/mobileServices_3.PNG" alt="Services">
 </div>
 
-### Gallery
+<div align="center">
+    <h1>Gallery - Mobile</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/mobileGallery.PNG" alt="Gallery">
 </div>
@@ -59,7 +66,10 @@
     <img src="externalAssets/mobileGallery_6.PNG" alt="Gallery">
 </div>
 
-### Extensions
+<div align="center">
+    <h1>Extensions - Mobile</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/mobileExtensions.PNG" alt="Extensions">
 </div>
@@ -76,7 +86,10 @@
     <img src="externalAssets/mobileExtensions_4.PNG" alt="Extensions">
 </div>
 
-### Vivids
+<div align="center">
+    <h1>Vivids - Mobile</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/mobileVivids.PNG" alt="Vivids">
 </div>
@@ -97,14 +110,18 @@
     <img src="externalAssets/mobileVivids_5.PNG" alt="Vivids">
 </div>
 
-### Book A Consult
+<div align="center">
+    <h1>Book A Consult - Mobile</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/mobileBookAConsult.PNG" alt="Book A Consult">
 </div>
 
-## Desktop Preview
+<div align="center">
+    <h1>Home Page - Desktop</h1>
+</div>
 
-### Home Page
 <div align="center">
     <img src="externalAssets/desktopHomePage.PNG" alt="Home Page">
 </div>
@@ -117,12 +134,18 @@
     <img src="externalAssets/desktopHomePage_3.PNG" alt="Home Page">
 </div>
 
-### Services
+<div align="center">
+    <h1>Services - Desktop</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/desktopServices.PNG" alt="Services">
 </div>
 
-### Gallery
+<div align="center">
+    <h1>Gallery - Desktop</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/desktopGallery.PNG" alt="Gallery">
 </div>
@@ -131,17 +154,26 @@
     <img src="externalAssets/desktopGallery_2.PNG" alt="Gallery">
 </div>
 
-### Extensions
+<div align="center">
+    <h1>Extensions - Desktop</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/desktopExtensions.PNG" alt="Extensions">
 </div>
 
-### Vivids
+<div align="center">
+    <h1>Vivids - Desktop</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/desktopVivids.PNG" alt="Vivids">
 </div>
 
-### Book A Consult
+<div align="center">
+    <h1>Book A Consult - Desktop</h1>
+</div>
+
 <div align="center">
     <img src="externalAssets/desktopBookAConsult.PNG" alt="Book A Consult">
 </div>
