@@ -8,8 +8,6 @@ A commercial website for Vicious Streak Salon built on Next.js.
 
 ## Demo
 
-[Vicious Streak Salon - Development](https://viciousstreaksalon.vercel.app/)
-
 [Vicious Streak Salon - Live](https://viciousstreaksalon.com)
 
 ## Desktop and Mobile Screenshots
