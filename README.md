@@ -1,10 +1,7 @@
 <div align="center">
-  <img src="https://viciousstreaksalon.vercel.app/_next/image?url=%2Flogos%2Fvss_logo.png&w=64&q=75">
+  <img src="./externalAssets/salon.png" width="300" height="300">
+  <h1>Vicious Streak Salon</h1>
 </div>
-
-# Vicious Streak Salon
-
-A commercial website for Vicious Streak Salon built on Next.js.
 
 ## Demo
 
